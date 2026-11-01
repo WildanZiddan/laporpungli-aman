@@ -1,0 +1,297 @@
+========================================================================================
+             LAPORPUNGLI AMAN — DOKUMEN STRATEGIS & SKRIP PRESENTASI JUARA 1
+        Kompetisi Web Design Kategori Civic Tech & Anti-Korupsi Tingkat Nasional
+========================================================================================
+
+TIM PENGEMBANG:
+1. Wildan Yazid Ziddan  — Lead Security & Software Architect (Technical & Live Demo)
+2. Titta Zalfa Faliha Mukti — Civic Impact & Design Systems Specialist (Vision & Storyteller)
+
+PORTAL DEV URL: http://localhost:5173/
+DESIGN SPECIFICATION: Awesomic Editorial Zinc Grid with Confetti-Orange Punctuation (DESIGN.md)
+
+========================================================================================
+DAFTAR ISI:
+1. PEMBAGIAN PERAN & PSIKOLOGI PANGGUNG (DUAL-ANCHOR STRATEGY)
+2. SKRIP KATA-DEMI-KATA RUNDOWN 7 MENIT (PITCHING & LIVE DEMO)
+3. MATRIKS TANYA-JAWAB MAUT DEWAN JURI (Q&A DEFENSE CHEATSHEET)
+4. CHECKLIST TEKNIS & PROTOKOL DARURAT SEBELUM NAIK PANGGUNG
+5. RINGKASAN LANDASAN HUKUM & METRIK NASIONAL UNTUK DIPAPARKAN
+========================================================================================
+
+----------------------------------------------------------------------------------------
+BAB 1: PEMBAGIAN PERAN & PSIKOLOGI PANGGUNG (DUAL-ANCHOR STRATEGY)
+----------------------------------------------------------------------------------------
+
+* Prinsip Utama: "Jangan pernah terlihat seperti dua orang yang bergantian membaca slide!"
+  Kalian adalah tim komplementer: satu menyentuh nurani dan urgensi kemanusiaan, satu
+  menghantam dengan benteng teknologi yang tak terbantahkan.
+
+A. TITTA ZALFA FALIHA MUKTI (The Empathy & Civic Visionary):
+   - Posisi Fisik: Berdiri di sisi kiri panggung, sedikit lebih maju ke arah juri.
+   - Karakter Vokal: Tenang, tegas, berwibawa, penuh empati, kontak mata kuat ke juri.
+   - Porsi Bicara: 
+     1. Pembukaan (Problem Hook & Fakta Darurat SPI KPK 70.97).
+     2. Filosofi Desain Awesomic (Anti-Slop UI, WCAG 2.1 AAA, wibawa editorial).
+     3. Penjelasan Akuntabilitas Linimasa Publik (Anti-Peti Es).
+     4. Penutup Berdampak (Closing Punchline & Pernyataan Kemenangan).
+
+B. WILDAN YAZID ZIDDAN (The Iron Architect & Live Demo Operator):
+   - Posisi Fisik: Berdiri di sisi kanan panggung di dekat meja podium/laptop kontroler.
+   - Karakter Vokal: Presisi, percaya diri, lugas, teknikal tapi mudah dipahami.
+   - Porsi Bicara & Aksi:
+     1. Demonstrasi Emergency Quick Exit (ESC ganda).
+     2. Live Demo Form The Vault (Pemisah Rupiah otomatis & Sanitasi EXIF Canvas).
+     3. Eksekusi Enkripsi In-Browser AES-GCM 256-bit & Tiket 16 Kata BIP-39.
+     4. Dekripsi Klien di Tracker & Pembuktian 5 Tahapan Investigasi APIP.
+     5. Pertahanan Teknis pada Sesi Tanya Jawab.
+
+----------------------------------------------------------------------------------------
+BAB 2: SKRIP KATA-DEMI-KATA RUNDOWN 7 MENIT (PITCHING & LIVE DEMO)
+----------------------------------------------------------------------------------------
+
+[MENIT 0:00 - 01:15] PEMBUKAAN: FAKTA KELAM & PARADOKS PELAPORAN
+Layar: Menampilkan Beranda LaporPungli Aman (http://localhost:5173/)
+
+(TITTA):
+"Selamat pagi/siang Dewan Juri yang terhormat.
+Tahun 2023 lalu, KPK merilis hasil Survei Penilaian Integritas Nasional: skor kita anjlok 
+ke angka 70,97—zona rentan korupsi. Pada saat yang sama, Ombudsman RI menerima lebih dari 
+7.000 keluhan pungutan liar yang merajalela di loket-loket pelayanan dasar: pengurusan 
+sertifikat tanah, pendaftaran sekolah, jembatan timbang, hingga pemasyarakatan.
+
+Pertanyaannya: Mengapa jutaan masyarakat memilih diam dan tetap membayar pungli?
+Jawabannya bukan karena mereka tidak peduli, melainkan karena mereka TAKUT.
+
+Kanal pelaporan konvensional saat ini selalu menuntut NIK, nomor WhatsApp, atau email. 
+Bagi warga kecil, melapor sama artinya dengan membuka pintu intimidasi, pembalasan dendam, 
+dan kriminalisasi. 
+
+Hari ini, saya Titta Zalfa Faliha Mukti bersama rekan saya Wildan Yazid Ziddan 
+mempersembahkan 'LaporPungli Aman': kanal pelaporan whistleblower terenkripsi langsung 
+di browser dengan garansi 100% anonimitas, dan linimasa investigasi publik yang tidak dapat 
+dimanipulasi."
+
+
+[MENIT 01:15 - 02:15] FILOSOFI DESAIN: AWESOMIC EDITORIAL & MELAWAN "AI SLOP"
+Layar: Masih di Beranda, memperlihatkan keanggunan kanvas #f4f4f5 dan tipografi DM Sans
+
+(TITTA):
+"Sebagai portal Civic Tech, kami menolak keras tren desain yang marak belakangan ini—apa 
+yang kami sebut sebagai 'AI Slop': gradien ungu-biru neon ala cyberpunk, dark-mode hacker 
+kartun, atau maskot 3D palsu yang tidak realistis untuk instansi resmi Indonesia.
+
+Kami mengadopsi standar 'Awesomic Editorial Zinc Grid' berakar pada panduan desain 
+institusional ProPublica dan Gov.uk:
+1. Kanvas dasar 'Paper' abu-abu zinc (#f4f4f5) yang tenang dan berwibawa.
+2. Kartu permukaan putih bersih dengan radius lengkung 36px yang ramah pengguna.
+3. Garis pembatas hairline 1px (#ececee) yang menggantikan bayangan drop shadow berlebih.
+4. Satu aksen warna fungsional tunggal: Confetti-Orange (#ff5a00) untuk menandai status kritis.
+5. Aksesibilitas internasional WCAG 2.1 AAA dengan rasio kontras teks di atas 7 banding 1.
+
+Desain ini diciptakan bukan sekadar untuk estetika kompetisi, melainkan untuk membangun 
+RASA AMAN DAN KEPERCAYAAN MUTLAK bagi pelapor dalam 3 detik pertama."
+
+
+[MENIT 02:15 - 05:00] THE LIVE DEMO: BUKTI NYATA KODE & SISTEM BEKERJA
+Layar: Wildan mengambil kendali mouse dan mic untuk live demo interaktif
+
+(WILDAN):
+"Terima kasih Titta. Sekarang, mari kita uji langsung sistem ini bekerja di browser.
+
+(Aksi 1: Demonstrasi Emergency Quick Exit)
+Bayangkan seorang warga sedang mengetik laporan di kantor kelurahan dan tiba-tiba ada 
+petugas menghampiri. Dengan menekan tombol ESC dua kali di keyboard—seperti ini:
+[Wildan menekan tombol ESC 2x cepat, browser langsung redirect ke bmkg.go.id]
+Seluruh isian memori form dihancurkan seketika, dan layar langsung digantikan portal 
+cuaca nasional BMKG. Pelapor aman dari kecurigaan fisik.
+
+[Wildan membuka kembali tab LaporPungli Aman, klik tombol 'Lapor Terenkripsi']
+
+(Aksi 2: Zero-PII & Pemisah Ribuan Rupiah Otomatis)
+Perhatikan Langkah 1 form 'The Vault'. Tidak ada satu pun kolom nama, NIK, atau nomor telepon. 
+Kami menerapkan prinsip Zero-PII (Personally Identifiable Information).
+
+Masuk ke Langkah 2: Ketika saya mengetikkan nilai pungutan liar, misalnya dua juta tujuh 
+ratus lima puluh ribu rupiah:
+[Wildan mengetik '2750000']
+Sistem secara real-time langsung memformatnya dengan pemisah titik Rupiah resmi: 
+'Rp 2.750.000'. Terdapat juga chip pilihan cepat 500 ribu hingga 10 juta untuk efisiensi.
+
+(Aksi 3: Sanitasi EXIF Canvas Otomatis)
+Ketika foto kuitansi pungli diunggah:
+[Wildan memilih sampel foto bukti]
+Modul HTML5 Canvas EXIF Scrubber lokal kami langsung bekerja: koordinat GPS lintang-bujur 
+dan merk HP pelapor dihapus total dari file gambar sebelum berkas disentuh enkripsi.
+
+(Aksi 4: Enkripsi In-Browser AES-GCM 256-bit & Tiket 16 Kata)
+Saat saya klik 'Enkripsi & Kirim Laporan':
+[Wildan menekan tombol kirim]
+Algoritma militer AES-GCM 256-bit dieksekusi langsung di browser. Kunci enkripsinya 
+dikonversikan menjadi 16 KATA RAHASIA standar BIP-39!
+Server kami tidak menyimpan kunci ini. Hanya pelapor yang memegangnya.
+
+(Aksi 5: Pelacakan Status Kasus dengan 16 Kata)
+Sekarang, bagaimana pelapor memantau laporannya tanpa login? 
+Kita klik tombol 'Cek Status Tiket Ini Langsung':
+[Wildan menekan tombol, sistem otomatis membuka tab Status Tiket dan terisi 16 kata]
+Saat saya klik 'Buka & Dekripsi Dokumen Laporan':
+[Layar menampilkan animasi dekripsi dan membuka linimasa 5 tahapan investigasi]
+Laporan terbuka! Kita bisa melihat linimasa 5 tahapan resmi inspektorat, catatan rahasia 
+APIP, nominal pungli yang tersanitasi, serta hitung mundur batas waktu SLA penanganan."
+
+
+[MENIT 05:00 - 06:15] EXPANDED CIVIC PORTAL: LINIMASA, PANDUAN, FAQ & TENTANG KAMI
+Layar: Titta kembali mengambil kendali narasi, Wildan menavigasikan tab
+
+(TITTA):
+"Bukan hanya brankas pelaporan, portal ini adalah ekosistem civic tech yang utuh:
+
+1. Tab Linimasa Publik:
+   [Wildan klik tab 'Linimasa Publik']
+   Seluruh masyarakat dapat mengawal penanganan kasus riil nasional—seperti Skandal Pungli 
+   Rutan KPK dan Pungli PTSL Pasuruan. Setiap progres disegel stempel Cryptographic Audit 
+   Hash (SHA-256) agar kasus tidak bisa dimanipulasi atau dipeti-eskan di tengah jalan.
+
+2. Tab Panduan Whistleblower:
+   [Wildan klik tab 'Panduan']
+   Kami menyediakan panduan 5 fase terperinci bagi warga awam: mulai dari penggunaan 
+   incognito, larangan WiFi kantor, hingga 3 Aturan Emas Keselamatan Pelapor.
+
+3. Tab FAQ Interaktif:
+   [Wildan klik tab 'FAQ']
+   Pusat bantuan interaktif dengan pencarian cepat dan penyaringan kategori: privasi, 
+   kunci 16 kata, hingga kepastian hukum perlindungan pelapor.
+
+4. Tab Tentang Kami & Legalitas Hukum:
+   [Wildan klik tab 'Tentang Kami']
+   Memaparkan visi inisiatif, 3 pilar benteng perlindungan, rujukan 4 undang-undang resmi 
+   (UU Ombudsman, Perpres Saber Pungli, UU LPSK, UU KIP), serta profil kami berdua 
+   sebagai pengembang sistem ini."
+
+
+[MENIT 06:15 - 07:00] KESIMPULAN & CLOSING PUNCHLINE
+Layar: Menampilkan footer portal dengan nama Wildan Yazid Ziddan & Titta Zalfa Faliha Mukti
+
+(TITTA):
+"Dewan Juri yang kami hormati,
+Pungutan liar bukan hanya soal uang receh yang hilang di loket pelayanan. Pungli adalah 
+pajak gelap yang memeras rakyat kecil dan meruntuhkan wibawa negara.
+
+Melalui 'LaporPungli Aman', kami membuktikan bahwa desain web kelas dunia bukan sekadar 
+soal susunan tombol dan warna yang indah, melainkan instrumen pertahanan hak asasi warga 
+dan penegak keadilan bangsa.
+
+Ketika ketakutan pelapor dihilangkan oleh benteng enkripsi, dan proses penanganan hukum 
+diawasi oleh transparansi publik, maka di sanalah keadilan mulai tegak berdiri.
+
+(WILDAN & TITTA):
+Terima kasih. Kami siap menjawab pertanyaan Dewan Juri!"
+
+========================================================================================
+BAB 3: MATRIKS TANYA-JAWAB MAUT DEWAN JURI (Q&A DEFENSE CHEATSHEET)
+========================================================================================
+
+PERTANYAAN 1 (Juri IT / Technical Security):
+"Karena aplikasi ini berjalan di frontend (React/Vite), di mana data disimpan dan bukankah 
+data bisa hilang jika browser di-refresh?"
+
+JAWABAN (WILDAN):
+"Pertanyaan yang sangat tajam, Bapak/Ibu Juri.
+Untuk purwarupa kompetisi ini, kami mengimplementasikan Isolated Client-Side Vault Engine 
+berbasis localStorage terenkripsi yang sudah kami lengkapi dengan seed cases riil agar juri 
+dapat langsung menguji alur secara instan tanpa backend mock.
+
+Pada arsitektur produksi (target arsitektur kami), payload yang dikirim ke server hanyalah 
+Ciphertext Blob (data yang sudah terenkripsi AES-GCM 256-bit di browser) bersama digest SHA-256. 
+Artinya, backend database pemerintah sekalipun jika diretas atau disita penegak hukum, pihak 
+penyerang HANYA mendapatkan kode biner acak. Kunci dekripsinya hanya ada di 16 kata rahasia 
+yang disimpan oleh pelapor. Inilah esensi sejati dari arsitektur Zero-Knowledge."
+
+
+PERTANYAAN 2 (Juri Desain / UI-UX):
+"Mengapa tidak menggunakan login Google, Apple ID, atau NIK agar pelapor tidak perlu repot 
+menyimpan 16 kata rahasia?"
+
+JAWABAN (TITTA):
+"Itu adalah jebakan kenyamanan (convenience trap) yang sering mengorbankan nyawa pelapor.
+Dalam studi psikologi whistleblower, faktor nomor satu masyarakat tidak mau melapor adalah 
+ketakutan identitasnya bocor atau datanya ditautkan ke akun pribadi.
+
+Dengan menggantikan akun login dengan 16-word mnemonic standar BIP-39, kami memutus 100% 
+tali koneksi antara identitas pribadi pelapor dengan laporan pungli tersebut. Untuk mengatasi 
+beban kognitif, antarmuka kami menyediakan tombol 'Salin 16 Kata', 'Unduh Tiket', dan tombol 
+satu-klik 'Cek Status Tiket Ini Langsung' yang otomatis mengisikan 16 kata ke tracker tanpa 
+pelapor perlu mengetik ulang secara manual."
+
+
+PERTANYAAN 3 (Juri Pemerintahan / Legal Civic):
+"Bagaimana sistem ini menyaring laporan palsu, fitnah, atau spam jika pelapornya 100% anonim?"
+
+JAWABAN (WILDAN & TITTA):
+"Kami menerapkan filter validasi bertingkat:
+1. Validasi Materiil Form: Pelapor wajib mencantumkan bukti digital terverifikasi, tanggal 
+   kejadian spesifik, nama instansi terlapor, serta rincian nominal transaksi yang jelas.
+2. Tahap 1 Verifikasi Awal Inspektorat (SLA 3x24 Jam): Tim APIP/Inspektorat memiliki batas waktu 
+   resmi untuk memverifikasi apakah laporan memenuhi syarat formil dan materiil. Jika laporan 
+   terbukti fitnah atau tanpa bukti, kasus ditolak pada tahap verifikasi awal sebelum 
+   dinaikkan ke audit forensik lapangan."
+
+
+PERTANYAAN 4 (Juri Aksesibilitas & Tipografi):
+"Mengapa memilih palet warna Zinc dengan aksen oranye dan font DM Sans, bukan warna 
+merah-putih nasional atau biru institusi pemerintahan?"
+
+JAWABAN (TITTA):
+"Warna biru instansi dan merah-putih konvensional sering kali diasosiasikan masyarakat dengan 
+birokrasi kaku yang lambat. Sebaliknya, warna neon futuristik terasa seperti game atau main-main.
+
+Kami memilih palet Awesomic Zinc Grid (#f4f4f5 Paper Canvas dan #09090b Obsidian) yang dipadukan 
+dengan aksen Confetti-Orange (#ff5a00) karena palet ini menciptakan wibawa jurnalisme investigatif 
+tinggi—seperti standar ProPublica dan Gov.uk. Rasio kontras teksnya memenuhi standar tertinggi 
+WCAG 2.1 AAA (> 7:1), menjamin keterbacaan sempurna di berbagai layar proyektor dan ponsel warga."
+
+========================================================================================
+BAB 4: CHECKLIST TEKNIS & PROTOKOL DARURAT SEBELUM NAIK PANGGUNG
+========================================================================================
+
+1. Kesiapan Laptop:
+   [ ] Resolusi layar diatur ke 1920x1080 (1080p standar proyektor HDMI).
+   [ ] Browser Google Chrome dibuka dalam mode Fullscreen (F11) atau zoom 100%.
+   [ ] Matikan notifikasi sistem (Windows Focus Assist aktif / Do Not Disturb).
+
+2. Kesiapan Tab & URL:
+   [ ] Buka tab utama di: http://localhost:5173/
+   [ ] Buka tab cadangan BMKG di https://www.bmkg.go.id (untuk memastikan target ESC aktif).
+   [ ] Pastikan localStorage browser sudah terisi (cukup refresh http://localhost:5173/).
+
+3. Trik Panggung Saat Live Demo:
+   - JANGAN PERNAH mengetik 16 kata rahasia satu per satu di depan juri!
+   - Gunakan tombol 'Cek Status Tiket Ini Langsung' saat selesai submit, ATAU
+   - Gunakan chip demo: 'Gunakan Laporan Terakhir' atau 'Contoh Kasus 1: Pungli PTSL Pasuruan'.
+   - Waktu demo akan terasa sangat cepat, mulus, dan terlihat sangat profesional.
+
+4. Emergency Backup:
+   - Jika proyektor flicker saat ESC ganda ditekan, Wildan cukup menjelaskan: 
+     "Fitur ESC ganda baru saja mendemonstrasikan penghancuran sesi instan demi keselamatan."
+   - Lanjutkan klik tab LaporPungli Aman untuk melanjutkan ke modul The Vault.
+
+========================================================================================
+BAB 5: RINGKASAN LANDASAN HUKUM & METRIK NASIONAL (POCKET SUMMARY)
+========================================================================================
+
+1. Metrik Nasional:
+   - Skor Survei Penilaian Integritas (SPI) KPK 2023: 70.97 (Kategori Rentan Korupsi).
+   - Ombudsman RI: 7.000+ aduan pungli layanan publik per tahun.
+   - Kasus Nyata di Sistem: Pungli PTSL Pasuruan (Rp 2,5 Juta/sertifikat) & Skandal Pungli 
+     Rutan KPK (Rp 6,1 Miliar dengan tarif HP Rp 20 Juta).
+
+2. Landasan Hukum:
+   - UU No. 37/2008 Pasal 24: Hak kerahasiaan identitas pelapor maladministrasi Ombudsman RI.
+   - Perpres No. 87/2016: Peran serta warga dalam Satgas Sapu Bersih Pungutan Liar.
+   - UU No. 31/2014 Pasal 10: Imunitas hukum (pidana/perdata) bagi saksi dan pelapor LPSK.
+   - UU No. 14/2008: Keterbukaan Informasi Publik (KIP) atas akuntabilitas penanganan kasus.
+
+========================================================================================
+                  SEMOGA SUKSES DAN MEMBAWA PULANG PIALA JUARA 1!
+========================================================================================

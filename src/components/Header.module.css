@@ -1,0 +1,184 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: var(--surface-card);
+  border-bottom: 1px solid var(--border-hairline);
+  box-shadow: var(--shadow-sm);
+}
+
+.bannerEmergency {
+  background-color: #fef2f2;
+  border-bottom: 1px solid #fecaca;
+  padding: 8px 16px;
+  font-size: 13px;
+  color: #b91c1c;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.bannerEmergencyLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bannerEmergencyLeft strong {
+  font-weight: 600;
+}
+
+.kbd {
+  font-family: var(--font-mono);
+  background: var(--surface-card);
+  border: 1px solid #fecaca;
+  border-radius: var(--radius-xs);
+  padding: 1px 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #b91c1c;
+}
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  height: var(--header-height);
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.brandLogoMark {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  background-color: var(--color-obsidian);
+  color: var(--surface-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 15px;
+  box-shadow: var(--shadow-subtle);
+}
+
+.brandInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.brandName {
+  font-size: 15.5px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--color-obsidian);
+  line-height: 1.2;
+}
+
+.brandTagline {
+  font-size: 10.5px;
+  font-weight: 500;
+  color: var(--color-steel);
+  letter-spacing: 0.02em;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: var(--color-paper);
+  padding: 4px;
+  border-radius: var(--radius-pills);
+  border: 1px solid var(--border-hairline);
+  overflow-x: auto;
+}
+
+.navLink {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-steel);
+  transition: all var(--transition-fast);
+  padding: 6px 12px;
+  border-radius: var(--radius-pills);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.navLink:hover {
+  color: var(--color-obsidian);
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.navLinkActive {
+  color: var(--color-obsidian);
+  font-weight: 600;
+  background-color: var(--surface-card);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.btnQuickExit {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #ffffff;
+  color: #dc2626;
+  padding: 8px 14px;
+  border-radius: var(--radius-pills);
+  font-size: 12.5px;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+  border: 1px solid #fecaca;
+  flex-shrink: 0;
+}
+
+.btnQuickExit:hover {
+  background-color: #fef2f2;
+}
+
+.btnLapor {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--color-obsidian);
+  color: var(--color-snow);
+  padding: 9px 16px;
+  border-radius: var(--radius-buttons); /* 14px */
+  font-size: 13px;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+  border: 1.5px solid #2c2e34;
+  box-shadow: var(--shadow-subtle);
+  white-space: nowrap;
+}
+
+.btnLapor:hover {
+  background-color: var(--color-slate);
+}
+
+@media (max-width: 1024px) {
+  .nav {
+    display: none;
+  }
+  .bannerEmergencyLeft span {
+    display: none;
+  }
+}

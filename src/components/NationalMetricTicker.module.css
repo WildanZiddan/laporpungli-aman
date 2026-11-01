@@ -1,0 +1,139 @@
+.tickerSection {
+  background-color: var(--surface-card);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-cards); /* 36px */
+  padding: 32px;
+  box-shadow: var(--shadow-md);
+}
+
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-hairline);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.titleArea {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sectionTitle {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-obsidian);
+  margin: 0;
+}
+
+.legalBadge {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-steel);
+  background-color: var(--color-paper);
+  padding: 4px 10px;
+  border-radius: var(--radius-badges); /* 12px */
+  border: 1px solid var(--border-hairline);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.metricCard {
+  background-color: var(--surface-subtle-card);
+  border: 1px solid var(--border-hairline);
+  border-radius: 24px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all var(--transition-fast);
+}
+
+.metricCard:hover {
+  background-color: #ffffff;
+  border-color: var(--color-mist);
+  box-shadow: var(--shadow-sm);
+}
+
+.metricHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.metricLabel {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-steel);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.metricBadge {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: var(--radius-badges); /* 12px */
+}
+
+.badgeAmber {
+  background-color: var(--status-amber-bg);
+  color: var(--color-ember);
+  border: 1px solid var(--status-amber-border);
+}
+
+.badgeCrimson {
+  background-color: var(--status-crimson-bg);
+  color: var(--status-crimson);
+  border: 1px solid var(--status-crimson-border);
+}
+
+.badgeNeutral {
+  background-color: var(--color-paper);
+  color: var(--color-obsidian);
+  border: 1px solid var(--border-hairline);
+}
+
+.metricValue {
+  font-family: var(--font-sans);
+  font-size: 44px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--color-obsidian);
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.metricSubtext {
+  font-size: 13px;
+  color: var(--color-steel);
+  line-height: 1.45;
+  margin-bottom: 14px;
+}
+
+.metricSource {
+  font-size: 11px;
+  color: var(--color-fog);
+  border-top: 1px dashed var(--border-hairline);
+  padding-top: 12px;
+  margin-top: auto;
+}
+
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

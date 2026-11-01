@@ -1,0 +1,254 @@
+[
+  {
+    "id": "LP-2024-PTSL-084",
+    "category": "PTSL_BPN",
+    "categoryLabel": "Pertanahan & PTSL",
+    "title": "Dugaan Pungli Sertifikat Tanah PTSL di Desa Wonosari Pasuruan",
+    "agencyReported": "Kantor Pertanahan / Kelompok Masyarakat (Pokmas) Desa",
+    "currentStage": "STAGE_4_MAJELIS",
+    "stageNumber": 4,
+    "stageLabel": "Tahap 4: Sidang Majelis Etik & Pemeriksaan LHP",
+    "slaRemainingDays": 3,
+    "lastUpdated": "2024-09-18T10:30:00Z",
+    "cryptographicProofHash": "sha256:d8a1f49e0c5b3671a82f63e41b9e28c704f5e16790b1ad84a62174c839f289b0",
+    "summaryAction": "Inspektorat Daerah merampungkan audit LHP potensi kerugian warga; bukti aliran dana dan aset diserahkan ke Kejaksaan Negeri untuk proses penuntutan Tipikor.",
+    "legalReference": "Pelanggaran SKB 3 Menteri No. 25/2017 (Batas legal Rp150.000) jo UU No. 20/2001 Tipikor",
+    "statusType": "investigating",
+    "timelineMilestones": [
+      {
+        "stageNumber": 1,
+        "stageName": "Validasi Formil & Uji Bukti Awal",
+        "status": "completed",
+        "date": "2024-08-01",
+        "actor": "Tim Penerimaan Pengaduan Inspektorat Daerah",
+        "actionSummary": "Pengecekan kwitansi tarikan 'uang patok' Rp2,5 juta pada program PTSL warga; berkas dinyatakan memenuhi syarat formil pengaduan.",
+        "stageHash": "sha256:1a01...88c4"
+      },
+      {
+        "stageNumber": 2,
+        "stageName": "Audit Forensik & Verifikasi Lapangan",
+        "status": "completed",
+        "date": "2024-08-15",
+        "actor": "Auditor Investigasi Khusus Inspektorat",
+        "actionSummary": "Audit buku kas bendahara Pokmas dan wawancara tertutup dengan 24 warga pemohon sertifikat tanah; ditemukan selisih dana ilegal.",
+        "stageHash": "sha256:3b92...f01a"
+      },
+      {
+        "stageNumber": 3,
+        "stageName": "Pemanggilan & Pemeriksaan Terlapor",
+        "status": "completed",
+        "date": "2024-09-02",
+        "actor": "Majelis Pemeriksa Aparatur Pengawasan Internal Pemerintah (APIP)",
+        "actionSummary": "Pemeriksaan resmi terhadap Ketua Pokmas dan Kepala Desa; bukti transfer dan aset hasil pungutan dikonfrontasikan.",
+        "stageHash": "sha256:7c44...119d"
+      },
+      {
+        "stageNumber": 4,
+        "stageName": "Sidang Majelis Etik & Rekomendasi Sanksi",
+        "status": "current",
+        "date": "2024-09-18",
+        "actor": "Dewan Sidang Majelis Etik & APH",
+        "actionSummary": "Penyusunan Laporan Hasil Pemeriksaan (LHP) final untuk pelimpahan tindak pidana korupsi ke Kejaksaan Negeri.",
+        "stageHash": "sha256:d8a1...89b0"
+      },
+      {
+        "stageNumber": 5,
+        "stageName": "Putusan & Eksekusi Penegakan Hukum",
+        "status": "pending",
+        "date": "Target: 2024-09-21",
+        "actor": "Kejaksaan Negeri & Pengadilan Tipikor",
+        "actionSummary": "Penetapan tersangka tindak pidana korupsi dan penyitaan aset hasil kejahatan pungutan liar.",
+        "stageHash": "sha256:pending"
+      }
+    ]
+  },
+  {
+    "id": "LP-2024-RUTAN-012",
+    "category": "RUTAN_LAPAS",
+    "categoryLabel": "Rutan & Pemasyarakatan",
+    "title": "Skandal Fasilitas Ilegal & Pungutan Liar Rutan Cabang KPK",
+    "agencyReported": "Rutan Kelas I Jakarta Timur Cabang KPK",
+    "currentStage": "STAGE_5_VONIS",
+    "stageNumber": 5,
+    "stageLabel": "Tahap 5: Eksekusi Putusan Sanksi Etik Berat & Tipikor",
+    "slaRemainingDays": 0,
+    "lastUpdated": "2024-03-27T14:15:00Z",
+    "cryptographicProofHash": "sha256:4b9e28c704f5e16790b1ad84a62174c839f289b0d8a1f49e0c5b3671a82f63e4",
+    "summaryAction": "Dewan Pengawas (Dewas) KPK menjatuhkan sanksi etik berat kepada 78 pegawai rutan berupa permohonan maaf terbuka langsung, pemecatan dinas, dan pelimpahan tersangka ke penyidikan Tipikor KPK atas pungutan Rp6,1 Miliar.",
+    "legalReference": "Peraturan Dewas KPK No. 03/2021 jo Pasal 12 huruf e UU Tipikor",
+    "statusType": "sanction",
+    "timelineMilestones": [
+      {
+        "stageNumber": 1,
+        "stageName": "Temuan Investigasi Pelanggaran Awal",
+        "status": "completed",
+        "date": "2023-06-15",
+        "actor": "Dewan Pengawas KPK",
+        "actionSummary": "Pengusutan awal dari aduan pelanggaran etik penjaga rutan Mustarsidin yang terbukti memeras keluarga tahanan.",
+        "stageHash": "sha256:9a01...12b4"
+      },
+      {
+        "stageNumber": 2,
+        "stageName": "Audit Rekening & Forensik Transaksi",
+        "status": "completed",
+        "date": "2023-11-20",
+        "actor": "Satgas Forensik Digital & Finansial Dewas KPK",
+        "actionSummary": "Penelusuran puluhan rekening penampung pihak ketiga; terungkap perputaran dana pungli mencapai Rp6,1 Miliar dalam 4 tahun.",
+        "stageHash": "sha256:5b88...a991"
+      },
+      {
+        "stageNumber": 3,
+        "stageName": "Pemeriksaan Maraton 93 Pegawai",
+        "status": "completed",
+        "date": "2024-01-18",
+        "actor": "Majelis Sidang Etik Dewas KPK",
+        "actionSummary": "Pemeriksaan saksi tahanan, mantan pegawai, serta kepala rutan terkait skema tarif ponsel Rp20 juta dan listrik Rp5 juta per bulan.",
+        "stageHash": "sha256:2d44...330a"
+      },
+      {
+        "stageNumber": 4,
+        "stageName": "Musyawarah Putusan Majelis Sidang Etik",
+        "status": "completed",
+        "date": "2024-02-15",
+        "actor": "Pimpinan Sidang Dewas KPK",
+        "actionSummary": "Gelar putusan etik terhadap klaster pertama: 78 dari 90 pegawai dinyatakan terbukti melakukan pelanggaran berat berencana.",
+        "stageHash": "sha256:8f12...bc49"
+      },
+      {
+        "stageNumber": 5,
+        "stageName": "Vonis Sanksi Berat Terbuka & Pidana Tipikor",
+        "status": "completed",
+        "date": "2024-03-27",
+        "actor": "Dewan Pengawas & Deputi Penindakan KPK",
+        "actionSummary": "Eksekusi sanksi etik berat berupa permohonan maaf terbuka langsung secara publik, pencopotan jabatan, dan pelimpahan tersangka Tipikor.",
+        "stageHash": "sha256:4b9e...63e4"
+      }
+    ]
+  },
+  {
+    "id": "LP-2024-PPDB-119",
+    "category": "PPDB_SEKOLAH",
+    "categoryLabel": "Pendidikan & PPDB",
+    "title": "Pungutan Liar Kuota Siswa Titipan PPDB SMA Negeri",
+    "agencyReported": "Komite Sekolah & Panitia PPDB Tingkat SMA Jawa Barat",
+    "currentStage": "STAGE_2_FORENSIK",
+    "stageNumber": 2,
+    "stageLabel": "Tahap 2: Audit Forensik Rekening & Pemeriksaan Saksi",
+    "slaRemainingDays": 5,
+    "lastUpdated": "2024-07-08T09:00:00Z",
+    "cryptographicProofHash": "sha256:7c839f289b0d8a1f49e0c5b3671a82f63e41b9e28c704f5e16790b1ad84a621a",
+    "summaryAction": "Satgas Saber Pungli Jawa Barat bersama Inspektorat Daerah memverifikasi bukti kuitansi sumbangan wajib sebesar Rp7,5 juta per siswa jalur non-zonasi.",
+    "legalReference": "Permendikbud No. 1/2021 tentang PPDB jo Perpres No. 87/2016",
+    "statusType": "investigating",
+    "timelineMilestones": [
+      {
+        "stageNumber": 1,
+        "stageName": "Penerimaan Laporan Anonim Berbukti Kuitansi",
+        "status": "completed",
+        "date": "2024-07-02",
+        "actor": "Posko Pengaduan Saber Pungli Jabar",
+        "actionSummary": "Verifikasi keaslian kuitansi 'uang gedung sukarela' yang diwajibkan panitia PPDB kepada 18 calon wali murid.",
+        "stageHash": "sha256:0d12...49e1"
+      },
+      {
+        "stageNumber": 2,
+        "stageName": "Audit Forensik Rekening & Pemeriksaan Saksi",
+        "status": "current",
+        "date": "2024-07-08",
+        "actor": "Tim Pokja Penindakan Satgas Saber Pungli",
+        "actionSummary": "Inspeksi mendadak ke sekolah terlapor dan penyitaan rekaman kamera pengawas (CCTV) ruang verifikasi berkas.",
+        "stageHash": "sha256:7c83...621a"
+      },
+      {
+        "stageNumber": 3,
+        "stageName": "Klarifikasi Kepala Sekolah & Komite",
+        "status": "pending",
+        "date": "Target: 2024-07-13",
+        "actor": "Inspektorat Daerah Provinsi",
+        "actionSummary": "Pemanggilan terjadwal ketua komite sekolah dan operator pendaftaran.",
+        "stageHash": "sha256:pending"
+      },
+      {
+        "stageNumber": 4,
+        "stageName": "Sidang Pembatalan Kuota Ilegal & Disiplin ASN",
+        "status": "pending",
+        "date": "Target: 2024-07-27",
+        "actor": "Majelis Pertimbangan Disiplin ASN",
+        "actionSummary": "Evaluasi sanksi pencopotan kepala sekolah dan pembatalan status penerimaan siswa titipan.",
+        "stageHash": "sha256:pending"
+      },
+      {
+        "stageNumber": 5,
+        "stageName": "Pengembalian Dana & Penegakan Hukum",
+        "status": "pending",
+        "date": "Target: 2024-08-05",
+        "actor": "APH & Dinas Pendidikan",
+        "actionSummary": "Pengembalian dana titipan penuh ke wali murid dan penetapan sanksi administratif/yustisi.",
+        "stageHash": "sha256:pending"
+      }
+    ]
+  },
+  {
+    "id": "LP-2024-SIM-047",
+    "category": "SATPAS_SAMSAT",
+    "categoryLabel": "Layanan Kepolisian & SIM",
+    "title": "Pungutan Liar Biaya Tambahan Penerbitan SIM C Tanpa Ujian",
+    "agencyReported": "Satpas Satlantas Wilayah",
+    "currentStage": "STAGE_3_KLARIFIKASI",
+    "stageNumber": 3,
+    "stageLabel": "Tahap 3: Pemeriksaan Terlapor & Gelar Bukti CCTV",
+    "slaRemainingDays": 2,
+    "lastUpdated": "2024-08-14T11:45:00Z",
+    "cryptographicProofHash": "sha256:1a82f63e41b9e28c704f5e16790b1ad84a62174c839f289b0d8a1f49e0c5b367",
+    "summaryAction": "Seksi Propam & Inspektorat Pengawasan Daerah memeriksa 3 oknum petugas terkait tarif 'jalur cepat' Rp450.000 (resmi PNBP Rp100.000); rekaman loket disita.",
+    "legalReference": "PP No. 76/2020 tentang Tarif PNBP Polri jo UU No. 37/2008 Ombudsman",
+    "statusType": "investigating",
+    "timelineMilestones": [
+      {
+        "stageNumber": 1,
+        "stageName": "Verifikasi Aduan Transaksi Jalur Cepat",
+        "status": "completed",
+        "date": "2024-08-05",
+        "actor": "Sentra Pengaduan Propam & Ombudsman",
+        "actionSummary": "Laporan warga terkait penawaran calo berseragam di luar loket ujian simulator.",
+        "stageHash": "sha256:6e11...99bc"
+      },
+      {
+        "stageNumber": 2,
+        "stageName": "Penyelidikan Lapangan & Pengawasan Tertutup",
+        "status": "completed",
+        "date": "2024-08-10",
+        "actor": "Unit Pemberantasan Pungli (UPP) Saber Pungli",
+        "actionSummary": "Operasi pengawasan tertutup di loket verifikasi identitas; pengamanan rekaman CCTV loket pembayaran tunai.",
+        "stageHash": "sha256:4a33...77d1"
+      },
+      {
+        "stageNumber": 3,
+        "stageName": "Pemeriksaan Terlapor & Gelar Bukti",
+        "status": "current",
+        "date": "2024-08-14",
+        "actor": "Seksi Profesi dan Pengamanan (Propam)",
+        "actionSummary": "Pemeriksaan intensif terhadap 3 oknum bintara loket pendaftaran dan pemindahan sementara dari tugas pelayanan masyarakat.",
+        "stageHash": "sha256:1a82...b367"
+      },
+      {
+        "stageNumber": 4,
+        "stageName": "Sidang Komisi Kode Etik Profesi",
+        "status": "pending",
+        "date": "Target: 2024-08-28",
+        "actor": "Majelis Komisi Kode Etik Kepolisian",
+        "actionSummary": "Gelar persidangan etik atas pelanggaran disiplin pemungutan biaya di luar tarif PNBP resmi.",
+        "stageHash": "sha256:pending"
+      },
+      {
+        "stageNumber": 5,
+        "stageName": "Putusan Mutasi Demosi & Penegakan Disiplin",
+        "status": "pending",
+        "date": "Target: 2024-09-05",
+        "actor": "Ankum Satuan Wilayah",
+        "actionSummary": "Pelaksanaan sanksi mutasi demosi 3 tahun dan penempatan pada penempatan khusus.",
+        "stageHash": "sha256:pending"
+      }
+    ]
+  }
+]

@@ -1,0 +1,335 @@
+.formContainer {
+  background-color: var(--surface-card);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-cards); /* 36px */
+  padding: 32px;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.formHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-hairline);
+  padding-bottom: 20px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.headerTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-obsidian);
+  margin: 0 0 6px 0;
+  letter-spacing: -0.015em;
+}
+
+.headerSubtitle {
+  font-size: 13.5px;
+  color: var(--color-steel);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.btnAbort {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: var(--radius-badges); /* 12px */
+  background-color: var(--color-paper);
+  color: var(--color-steel);
+  border: 1px solid var(--border-hairline);
+  font-size: 12px;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.btnAbort:hover {
+  background-color: #fef2f2;
+  color: #dc2626;
+  border-color: #fecaca;
+}
+
+/* Step Wizard Progress Bar */
+.wizardBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  gap: 12px;
+}
+
+.stepIndicator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.stepCircle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  background-color: var(--color-paper);
+  color: var(--color-fog);
+  border: 1px solid var(--border-hairline);
+  flex-shrink: 0;
+}
+
+.stepActive .stepCircle {
+  background-color: var(--color-obsidian);
+  color: var(--color-snow);
+  border-color: var(--color-obsidian);
+}
+
+.stepCompleted .stepCircle {
+  background-color: var(--status-green);
+  color: var(--color-snow);
+  border-color: var(--status-green);
+}
+
+.stepLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-steel);
+}
+
+.stepActive .stepLabel {
+  color: var(--color-obsidian);
+}
+
+.stepCompleted .stepLabel {
+  color: var(--status-green);
+}
+
+.stepDivider {
+  height: 1px;
+  background-color: var(--border-hairline);
+  flex: 1;
+}
+
+/* Field Groups */
+.stepContent {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--color-obsidian);
+}
+
+.labelHint {
+  font-size: 12px;
+  color: var(--color-fog);
+  font-weight: 400;
+}
+
+.input, .select, .textarea {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 14px;
+  border-radius: var(--radius-inputs); /* 14px */
+  border: 1px solid var(--border-hairline);
+  background-color: var(--surface-card);
+  color: var(--color-graphite);
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+}
+
+.input:focus, .select:focus, .textarea:focus {
+  border-color: var(--border-focus);
+  outline: none;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.5;
+}
+
+/* Upload & Sanitizer Box */
+.uploadZone {
+  border: 2px dashed var(--color-mist);
+  border-radius: 20px;
+  padding: 28px;
+  text-align: center;
+  background-color: var(--color-paper);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.uploadZone:hover {
+  border-color: var(--color-obsidian);
+  background-color: #ffffff;
+}
+
+.hiddenFileInput {
+  display: none;
+}
+
+.sanitizerStatusCard {
+  background-color: var(--status-green-bg);
+  border: 1px solid var(--status-green-border);
+  border-radius: var(--radius-inputs); /* 14px */
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 12.5px;
+  color: var(--status-green);
+}
+
+.previewContainer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: var(--color-paper);
+  padding: 14px;
+  border-radius: var(--radius-inputs); /* 14px */
+  border: 1px solid var(--border-hairline);
+}
+
+.previewThumb {
+  width: 68px;
+  height: 68px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--border-hairline);
+}
+
+.previewMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12.5px;
+  color: var(--color-steel);
+}
+
+/* Footer Navigation Buttons */
+.footerNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--border-hairline);
+  padding-top: 24px;
+  gap: 16px;
+}
+
+.btnNext, .btnSubmit {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-obsidian);
+  color: var(--color-snow);
+  padding: 12px 24px;
+  border-radius: var(--radius-buttons); /* 14px */
+  font-size: 14px;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+  border: 1.5px solid #2c2e34;
+  box-shadow: var(--shadow-subtle);
+}
+
+.btnNext:hover, .btnSubmit:hover {
+  background-color: var(--color-slate);
+}
+
+.btnBack {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--surface-card);
+  color: var(--color-steel);
+  padding: 12px 20px;
+  border-radius: var(--radius-buttons); /* 14px */
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid var(--border-hairline);
+  box-shadow: var(--shadow-sm);
+}
+
+.btnBack:hover {
+  background-color: var(--color-paper);
+  color: var(--color-obsidian);
+}
+
+.btnSubmit:disabled, .btnNext:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.loadingSpinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #FFFFFF;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 640px) {
+  .wizardBar .stepLabel {
+    display: none;
+  }
+}
+
+.amountPresets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.presetChip {
+  padding: 6px 14px;
+  border-radius: var(--radius-badges); /* 12px */
+  background-color: var(--surface-card);
+  border: 1px solid var(--border-hairline);
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--color-graphite);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.presetChip:hover {
+  background-color: var(--color-paper);
+  border-color: var(--color-mist);
+  color: var(--color-obsidian);
+}
+
+.presetChipActive {
+  background-color: var(--color-obsidian);
+  color: var(--color-snow);
+  border-color: var(--color-obsidian);
+  box-shadow: var(--shadow-subtle);
+}

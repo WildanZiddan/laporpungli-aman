@@ -1,0 +1,457 @@
+.guideWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}
+
+/* Header Card */
+.headerCard {
+  background-color: var(--surface-card);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-cards); /* 36px */
+  padding: 36px;
+  box-shadow: var(--shadow-md);
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.eyebrowBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--status-amber-bg);
+  color: var(--color-ember);
+  border: 1px solid var(--status-amber-border);
+  padding: 4px 12px;
+  border-radius: var(--radius-badges); /* 12px */
+  font-size: 12px;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.mainTitle {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-obsidian);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.leadText {
+  font-size: 15px;
+  color: var(--color-steel);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.actionRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-obsidian);
+  color: var(--color-snow);
+  padding: 12px 22px;
+  border-radius: var(--radius-buttons); /* 14px */
+  font-size: 14px;
+  font-weight: 600;
+  border: 1.5px solid #2c2e34;
+  box-shadow: var(--shadow-subtle);
+  transition: all var(--transition-fast);
+}
+
+.btnPrimary:hover {
+  background-color: var(--color-slate);
+}
+
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--surface-card);
+  color: var(--color-graphite);
+  padding: 12px 20px;
+  border-radius: var(--radius-buttons); /* 14px */
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid var(--border-hairline);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.btnSecondary:hover {
+  background-color: var(--color-paper);
+  border-color: var(--color-mist);
+}
+
+.headerRightNotice {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 24px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.noticeIconWrap {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-badges); /* 12px */
+  background-color: #fee2e2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #dc2626;
+}
+
+.noticeContent {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.noticeTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #991b1b;
+  margin: 0;
+}
+
+.noticeText {
+  font-size: 13px;
+  color: #7f1d1d;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Steps Section */
+.stepsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stepsNavRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.stepNavTab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: var(--radius-badges); /* 12px */
+  background-color: var(--surface-card);
+  border: 1px solid var(--border-hairline);
+  color: var(--color-steel);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+  white-space: nowrap;
+}
+
+.stepNavTab:hover {
+  background-color: var(--color-paper);
+  color: var(--color-obsidian);
+}
+
+.stepNavTabActive {
+  background-color: var(--color-obsidian);
+  color: var(--color-snow);
+  border-color: var(--color-obsidian);
+  box-shadow: var(--shadow-subtle);
+}
+
+.stepNavTabActive:hover {
+  background-color: var(--color-slate);
+  color: var(--color-snow);
+}
+
+.stepNumBadge {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.stepNavTabActive .stepNumBadge {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.stepNavText {
+  font-size: 13px;
+}
+
+/* Active Step Card */
+.activeStepCard {
+  background-color: var(--surface-card);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-cards); /* 36px */
+  padding: 36px;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.stepCardHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  border-bottom: 1px solid var(--border-hairline);
+  padding-bottom: 20px;
+}
+
+.stepIconBox {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  background-color: var(--color-paper);
+  border: 1px solid var(--border-hairline);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-obsidian);
+  flex-shrink: 0;
+}
+
+.stepHeaderTitles {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.stepMetaRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stepPhaseTag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-ember);
+  background-color: var(--status-amber-bg);
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.stepCategoryTag {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-steel);
+  background-color: var(--color-paper);
+  padding: 2px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--border-hairline);
+}
+
+.stepTitleText {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-obsidian);
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+
+.stepSubtitleText {
+  font-size: 14px;
+  color: var(--color-steel);
+  margin: 0;
+}
+
+.stepCardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.instructionsHeading {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-obsidian);
+  margin: 0;
+}
+
+.instructionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.instructionItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--color-graphite);
+  line-height: 1.55;
+  background-color: var(--surface-subtle-card);
+  padding: 14px 18px;
+  border-radius: var(--radius-inputs); /* 14px */
+  border: 1px solid var(--border-hairline);
+}
+
+.checkIcon {
+  color: var(--status-green);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.stepCardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-top: 1px solid var(--border-hairline);
+  padding-top: 20px;
+}
+
+.stepNavButtons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btnStepPrev {
+  padding: 10px 18px;
+  border-radius: var(--radius-buttons); /* 14px */
+  background-color: var(--surface-card);
+  border: 1px solid var(--border-hairline);
+  color: var(--color-steel);
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btnStepPrev:hover {
+  background-color: var(--color-paper);
+  color: var(--color-obsidian);
+}
+
+.btnStepNext {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: var(--radius-buttons); /* 14px */
+  background-color: var(--color-obsidian);
+  border: 1.5px solid #2c2e34;
+  color: var(--color-snow);
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow-subtle);
+  transition: all var(--transition-fast);
+}
+
+.btnStepNext:hover {
+  background-color: var(--color-slate);
+}
+
+/* Golden Rules Card */
+.rulesCard {
+  background-color: var(--surface-card);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-cards); /* 36px */
+  padding: 32px;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.rulesHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rulesWarningIcon {
+  color: var(--color-ember);
+}
+
+.rulesTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-obsidian);
+  margin: 0;
+}
+
+.rulesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.ruleItem {
+  background-color: var(--surface-subtle-card);
+  border: 1px solid var(--border-hairline);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ruleNum {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-ember);
+}
+
+.ruleHeading {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-obsidian);
+  margin: 0;
+}
+
+.ruleDesc {
+  font-size: 13px;
+  color: var(--color-steel);
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .headerCard {
+    grid-template-columns: 1fr;
+  }
+  .rulesGrid {
+    grid-template-columns: 1fr;
+  }
+}
