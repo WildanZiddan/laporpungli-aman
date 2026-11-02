@@ -4,8 +4,7 @@ import {
   Scale,
   Lock,
   Eye,
-  FileCheck2,
-  Users
+  FileCheck2
 } from 'lucide-react';
 import styles from './AboutPage.module.css';
 
