@@ -143,42 +143,6 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onStartReport, onViewTimel
           </div>
         </div>
       </section>
-
-      <section className={styles.teamCard}>
-        <div className={styles.teamHeader}>
-          <div className={styles.teamIconBox}>
-            <Users size={22} aria-hidden="true" />
-          </div>
-          <div>
-            <span className={styles.teamEyebrow}>Kreator & Pengembang</span>
-            <h2 className={styles.teamTitle}>Tim Pengembang Civic Tech</h2>
-          </div>
-        </div>
-
-        <div className={styles.teamGrid}>
-          <div className={styles.memberCard}>
-            <div className={styles.memberAvatar}>WYZ</div>
-            <div className={styles.memberInfo}>
-              <h3 className={styles.memberName}>Wildan Yazid Ziddan</h3>
-              <span className={styles.memberRole}>Lead Security & Software Architect</span>
-              <p className={styles.memberDesc}>
-                Bertanggung jawab atas arsitektur kriptografi in-browser Web Crypto API (AES-GCM), modul EXIF Scrubber berbasis Canvas, dan mekanisme penyimpanan aman Zero-Knowledge.
-              </p>
-            </div>
-          </div>
-
-          <div className={styles.memberCard}>
-            <div className={styles.memberAvatar}>TZ</div>
-            <div className={styles.memberInfo}>
-              <h3 className={styles.memberName}>Titta Zalfa Faliha Mukti</h3>
-              <span className={styles.memberRole}>Civic Impact & UI/UX Designer</span>
-              <p className={styles.memberDesc}>
-                Bertanggung jawab atas perancangan desain sistem <em>Clean Institutional Editorial</em> dan psikologi antarmuka perlindungan saksi.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

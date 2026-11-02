@@ -224,8 +224,8 @@ export const App: React.FC = () => {
                 </h1>
 
                 <p className={styles.heroLead}>
-                  Kanal pengaduan untuk warga yang kena pungli. Laporan Anda dikirim secara 
-                  rahasia — tanpa nama, NIK, atau nomor HP. Setiap langkah penanganan oleh 
+                  Kanal pengaduan untuk warga yang kena pungli. Laporan Anda dikirim secara
+                  rahasia — tanpa nama, NIK, atau nomor HP. Setiap langkah penanganan oleh
                   inspektorat dicatat terbuka agar kasus tidak bisa ditutup diam-diam.
                 </p>
 
@@ -373,7 +373,7 @@ export const App: React.FC = () => {
                   Audit Trail Kriptografis: Mencegah Kasus Dipeti-Eskan
                 </h2>
                 <p className={styles.featureParagraph}>
-                  Setiap tahapan penanganan oleh Aparat Pengawas Internal Pemerintah (APIP) dan Inspektorat Wilayah 
+                  Setiap tahapan penanganan oleh Aparat Pengawas Internal Pemerintah (APIP) dan Inspektorat Wilayah
                   disertai stempel waktu digital dan bukti hash SHA-256 yang terpampang transparan bagi publik.
                 </p>
                 <div className={styles.featurePointList}>
@@ -472,9 +472,6 @@ export const App: React.FC = () => {
             </div>
           </div>
           <div className={styles.footerRight}>
-            <span style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', color: 'var(--color-steel)' }}>
-              Wildan Yazid Ziddan & Titta Zalfa Faliha Mukti
-            </span>
           </div>
         </div>
       </footer>
