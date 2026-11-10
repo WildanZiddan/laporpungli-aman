@@ -34,7 +34,7 @@ Pastikan Anda telah memasang **Node.js** (versi 18 LTS atau lebih baru) dan npm 
 
 ### 1. Kloning Repositori
 ```bash
-git clone https://github.com/username/laporpungli-aman.git
+git clone https://github.com/WildanZiddan/laporpungli-aman.git
 cd laporpungli-aman
 ```
 
