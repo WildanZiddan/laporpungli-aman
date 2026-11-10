@@ -92,5 +92,5 @@ Seluruh fitur inti dan modul keselamatan sistem telah selesai dibangun (*100% Fu
 
 Platform ini dirancang dan dikembangkan oleh:
 
-* **Wildan Yazid Ziddan** — *Lead Security & Software Architect*
-* **Titta Zalfa Faliha Mukti** — *Civic Impact & UI/UX Designer*
+* **Wildan Yazid Ziddan** — *Ketua Tim & Front-End Developer*
+* **Titta Zalfa Faliha Mukti** — *UI/UX Designer & System Analyst*
