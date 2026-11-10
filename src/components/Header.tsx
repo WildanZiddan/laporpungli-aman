@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Shield, ShieldAlert, Lock } from 'lucide-react';
+import { ShieldAlert, Lock } from 'lucide-react';
 import styles from './Header.module.css';
 
 export type NavTab = 'home' | 'cases' | 'vault' | 'tracker' | 'guide' | 'faq' | 'about';
@@ -67,12 +67,21 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, onNavigate }) => {
           className={styles.brand}
           aria-label="LaporPungli Aman - Beranda"
         >
-          <div className={styles.brandLogoMark}>
-            <Shield size={18} aria-hidden="true" />
-          </div>
+          <img
+            src="/logo-mascot.png"
+            alt=""
+            width={42}
+            height={45}
+            className={styles.brandLogoImg}
+            aria-hidden="true"
+          />
           <div className={styles.brandInfo}>
             <div className={styles.brandTextCol}>
-              <span className={styles.brandName}>LaporPungli Aman</span>
+              <span className={styles.brandName}>
+                <span className={styles.brandWordDark}>Lapor</span>
+                <span className={styles.brandWordBlue}>Pungli</span>{' '}
+                <span className={styles.brandWordAman}>Aman</span>
+              </span>
               <span className={styles.brandTagline}>Portal Pengaduan Tanpa Jejak</span>
             </div>
             <span className={styles.brandPillBadge}>Civic Tech Terenkripsi</span>

@@ -70,17 +70,12 @@
   flex-shrink: 0;
 }
 
-.brandLogoMark {
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
-  background-color: var(--color-accent-blue);
-  color: var(--surface-card);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 15px;
+.brandLogoImg {
+  height: 44px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .brandInfo {
@@ -95,11 +90,23 @@
 }
 
 .brandName {
-  font-size: 15.5px;
-  font-weight: 700;
-  letter-spacing: -0.01em;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
   color: var(--color-obsidian);
-  line-height: 1.2;
+  line-height: 1.15;
+}
+
+.brandWordDark {
+  color: #071026;
+}
+
+.brandWordBlue {
+  color: var(--color-accent-blue);
+}
+
+.brandWordAman {
+  color: var(--color-obsidian);
 }
 
 .brandTagline {
@@ -218,5 +225,29 @@
   }
   .bannerEmergencyLeft span {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px 12px;
+    gap: 8px;
+  }
+  .brand {
+    gap: 8px;
+    min-width: 0;
+  }
+  .brandLogoImg {
+    height: 34px;
+  }
+  .brandName {
+    font-size: 14px;
+  }
+  .brandTagline {
+    font-size: 9.5px;
+  }
+  .btnLapor {
+    padding: 8px 12px;
+    font-size: 12px;
   }
 }

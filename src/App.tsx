@@ -255,10 +255,17 @@ export const App: React.FC = () => {
           <div className={styles.footerGrid}>
             <div className={styles.footerBrandCol}>
               <div className={styles.footerBrandRow}>
-                <div className={styles.footerLogoMark}>
-                  <Shield size={17} aria-hidden="true" />
-                </div>
-                <span className={styles.footerBrandTitle}>LaporPungli Aman</span>
+                <img
+                  src="/logo-mascot.png"
+                  alt=""
+                  width={40}
+                  height={42}
+                  className={styles.footerLogoImg}
+                  aria-hidden="true"
+                />
+                <span className={styles.footerBrandTitle}>
+                  Lapor<span className={styles.footerBrandBlue}>Pungli</span> Aman
+                </span>
               </div>
               <p className={styles.footerBrandDesc}>
                 Portal pengaduan saksi &amp; korban pungli pelayanan publik berarsitektur Zero-Knowledge Kriptografis. Melindungi identitas warga secara mutlak tanpa jejak digital yang tertinggal.
