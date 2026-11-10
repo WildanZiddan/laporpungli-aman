@@ -28,11 +28,11 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background-color: var(--status-amber-bg);
-  color: var(--color-ember);
-  border: 1px solid var(--status-amber-border);
+  background-color: var(--color-blue-subtle);
+  color: var(--color-blue-text);
+  border: 1px solid var(--color-blue-border);
   padding: 4px 12px;
-  border-radius: var(--radius-badges); /* 12px */
+  border-radius: var(--radius-pills);
   font-size: 12px;
   font-weight: 600;
   width: fit-content;
@@ -66,19 +66,20 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: var(--color-obsidian);
+  background-color: var(--color-navy-hero);
   color: var(--color-snow);
   padding: 12px 22px;
-  border-radius: var(--radius-buttons); /* 14px */
+  border-radius: var(--radius-buttons);
   font-size: 14px;
   font-weight: 600;
-  border: 1.5px solid #2c2e34;
-  box-shadow: var(--shadow-subtle);
+  border: 1px solid var(--color-navy-hero);
+  cursor: pointer;
   transition: all var(--transition-fast);
 }
 
 .btnPrimary:hover {
-  background-color: var(--color-slate);
+  background-color: var(--color-accent-blue);
+  border-color: var(--color-accent-blue);
 }
 
 .btnSecondary {
@@ -180,14 +181,13 @@
 }
 
 .stepNavTabActive {
-  background-color: var(--color-obsidian);
+  background-color: var(--color-accent-blue);
   color: var(--color-snow);
-  border-color: var(--color-obsidian);
-  box-shadow: var(--shadow-subtle);
+  border-color: var(--color-accent-blue);
 }
 
 .stepNavTabActive:hover {
-  background-color: var(--color-slate);
+  background-color: var(--color-accent-blue-hover);
   color: var(--color-snow);
 }
 
@@ -257,8 +257,8 @@
   font-family: var(--font-mono);
   font-size: 11px;
   font-weight: 700;
-  color: var(--color-ember);
-  background-color: var(--status-amber-bg);
+  color: var(--color-blue-text);
+  background-color: var(--color-blue-subtle);
   padding: 2px 8px;
   border-radius: 6px;
 }
@@ -366,26 +366,24 @@
   align-items: center;
   gap: 8px;
   padding: 10px 20px;
-  border-radius: var(--radius-buttons); /* 14px */
-  background-color: var(--color-obsidian);
-  border: 1.5px solid #2c2e34;
+  border-radius: var(--radius-buttons);
+  background-color: var(--color-accent-blue);
+  border: 1px solid var(--color-accent-blue);
   color: var(--color-snow);
   font-size: 13.5px;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: var(--shadow-subtle);
   transition: all var(--transition-fast);
 }
 
 .btnStepNext:hover {
-  background-color: var(--color-slate);
+  background-color: var(--color-accent-blue-hover);
 }
 
-/* Golden Rules Card */
 .rulesCard {
   background-color: var(--surface-card);
   border: 1px solid var(--border-hairline);
-  border-radius: var(--radius-cards); /* 36px */
+  border-radius: var(--radius-cards);
   padding: 32px;
   box-shadow: var(--shadow-md);
   display: flex;
@@ -400,7 +398,7 @@
 }
 
 .rulesWarningIcon {
-  color: var(--color-ember);
+  color: var(--color-blue-text);
 }
 
 .rulesTitle {
@@ -430,7 +428,7 @@
   font-family: var(--font-mono);
   font-size: 13px;
   font-weight: 700;
-  color: var(--color-ember);
+  color: var(--color-blue-text);
 }
 
 .ruleHeading {

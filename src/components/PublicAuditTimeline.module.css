@@ -73,15 +73,72 @@
   border-color: var(--color-mist);
 }
 
+.backRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btnBack {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: var(--radius-buttons);
+  background-color: var(--surface-card);
+  border: 1px solid var(--border-hairline);
+  color: var(--color-obsidian);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btnBack:hover {
+  background-color: var(--color-paper);
+}
+
+.statusFilterGroup {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--color-paper);
+  padding: 4px;
+  border-radius: var(--radius-pills);
+  border: 1px solid var(--border-hairline);
+}
+
+.statusTabBtn {
+  padding: 6px 14px;
+  border-radius: var(--radius-pills);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--color-steel);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.statusTabBtn:hover {
+  color: var(--color-obsidian);
+}
+
+.statusTabBtnActive {
+  background-color: var(--color-navy-hero);
+  color: #ffffff;
+}
+
 .filterBtnActive {
-  background-color: var(--color-obsidian);
+  background-color: var(--color-accent-blue);
   color: var(--color-snow);
-  border-color: var(--color-obsidian);
-  box-shadow: var(--shadow-subtle);
+  border-color: var(--color-accent-blue);
 }
 
 .filterBtnActive:hover {
-  background-color: var(--color-slate);
+  background-color: var(--color-accent-blue-hover);
   color: var(--color-snow);
 }
 
@@ -185,15 +242,15 @@
 }
 
 .badgeAmber {
-  background-color: var(--status-amber-bg);
-  color: var(--color-ember);
-  border: 1px solid var(--status-amber-border);
+  background-color: var(--color-blue-subtle);
+  color: var(--color-blue-text);
+  border: 1px solid var(--color-blue-border);
 }
 
 .badgeCrimson {
-  background-color: var(--status-crimson-bg);
-  color: var(--status-crimson);
-  border: 1px solid var(--status-crimson-border);
+  background-color: var(--status-green-bg);
+  color: var(--status-green);
+  border: 1px solid var(--status-green-border);
 }
 
 .caseTitle {
@@ -259,9 +316,9 @@
 }
 
 .stepDotCurrent {
-  background-color: var(--color-ember);
+  background-color: var(--color-accent-blue);
   color: #ffffff;
-  border-color: var(--color-ember);
+  border-color: var(--color-accent-blue);
 }
 
 .stepName {
@@ -312,7 +369,7 @@
 .slaBadge {
   font-size: 12px;
   font-weight: 600;
-  color: var(--color-ember);
+  color: var(--color-blue-text);
 }
 
 .btnDetail {
@@ -320,20 +377,20 @@
   align-items: center;
   gap: 8px;
   padding: 9px 16px;
-  border-radius: var(--radius-buttons); /* 14px */
-  background-color: var(--surface-card);
-  color: var(--color-obsidian);
+  border-radius: var(--radius-buttons);
+  background-color: var(--color-blue-subtle);
+  color: var(--color-blue-text);
   font-size: 13px;
   font-weight: 600;
-  border: 1px solid var(--border-hairline);
+  border: 1px solid var(--color-blue-border);
+  cursor: pointer;
   transition: all var(--transition-fast);
-  box-shadow: var(--shadow-sm);
 }
 
 .btnDetail:hover {
-  background-color: var(--color-obsidian);
+  background-color: var(--color-accent-blue);
   color: var(--color-snow);
-  border-color: var(--color-obsidian);
+  border-color: var(--color-accent-blue);
 }
 
 /* Empty State */

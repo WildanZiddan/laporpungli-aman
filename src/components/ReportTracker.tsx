@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useCallback } from 'react';
 import {
   findReportByMnemonic,
   type IStoredVaultReport
@@ -23,22 +23,22 @@ interface ReportTrackerProps {
 }
 
 export const ReportTracker: React.FC<ReportTrackerProps> = ({ onBack, initialMnemonic }) => {
-  const [mnemonicInput, setMnemonicInput] = useState<string>(initialMnemonic || '');
+  const initialTrimmed = (initialMnemonic || '').trim();
+  const initialFound = initialTrimmed ? findReportByMnemonic(initialTrimmed) : null;
+
+  const [mnemonicInput, setMnemonicInput] = useState<string>(initialTrimmed);
   const [isSearching, setIsSearching] = useState<boolean>(false);
-  const [matchedReport, setMatchedReport] = useState<IStoredVaultReport | null>(null);
-  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [matchedReport, setMatchedReport] = useState<IStoredVaultReport | null>(initialFound);
+  const [errorMessage, setErrorMessage] = useState<string | null>(
+    initialTrimmed && !initialFound
+      ? 'Laporan tidak ditemukan. Pastikan Anda mengetikkan 16 kata sandi rahasia dengan benar (dipisahkan spasi) atau nomor laporan yang valid.'
+      : null
+  );
   const [copiedTicket, setCopiedTicket] = useState<boolean>(false);
 
-  useEffect(() => {
-    if (initialMnemonic) {
-      handleDecrypt(initialMnemonic);
-    }
-  }, [initialMnemonic]);
-
-  const wordCount = mnemonicInput.trim() ? mnemonicInput.trim().split(/\s+/).filter(Boolean).length : 0;
-
-  const handleDecrypt = (phraseToTest?: string) => {
-    const phrase = phraseToTest || mnemonicInput;
+  const handleDecrypt = useCallback((phraseToTest?: string) => {
+    const phrase = (phraseToTest ?? mnemonicInput).trim();
+    if (!phrase) return;
     setErrorMessage(null);
     setIsSearching(true);
 
@@ -52,11 +52,13 @@ export const ReportTracker: React.FC<ReportTrackerProps> = ({ onBack, initialMne
       } else {
         setMatchedReport(null);
         setErrorMessage(
-          'Kode tiket tidak ditemukan. Pastikan Anda mengetikkan 16 kata rahasia dengan benar, dipisahkan satu spasi. Periksa kembali catatan tiket Anda.'
+          'Laporan tidak ditemukan. Pastikan Anda mengetikkan 16 kata sandi rahasia dengan benar (dipisahkan spasi) atau nomor laporan yang valid.'
         );
       }
     }, 350);
-  };
+  }, [mnemonicInput]);
+
+  const wordCount = mnemonicInput.trim() ? mnemonicInput.trim().split(/\s+/).filter(Boolean).length : 0;
 
   const handleCopyTicket = (ticketId: string) => {
     navigator.clipboard.writeText(ticketId);
@@ -65,12 +67,12 @@ export const ReportTracker: React.FC<ReportTrackerProps> = ({ onBack, initialMne
   };
 
   return (
-    <div className={styles.trackerContainer} role="region" aria-label="Pelacak Tiket Rahasia">
+    <div className={styles.trackerContainer} role="region" aria-label="Lacak Status Laporan">
       <div className={styles.trackerHeader}>
         <div className={styles.titleArea}>
-          <h1 className={styles.mainTitle}>Pelacak Status Investigasi Terenkripsi</h1>
+          <h1 className={styles.mainTitle}>Lacak Status Laporan Anda</h1>
           <p className={styles.subTitle}>
-            Dekripsi status tindak lanjut inspektorat secara langsung di peramban Anda menggunakan 16 kata rahasia.
+            Pantau perkembangan penanganan laporan tanpa perlu membuat akun. Cukup masukkan 16 kata sandi rahasia atau nomor laporan Anda.
           </p>
         </div>
         <button type="button" className={styles.resetBtn} onClick={onBack}>
@@ -83,10 +85,10 @@ export const ReportTracker: React.FC<ReportTrackerProps> = ({ onBack, initialMne
         <div className={styles.inputSection}>
           <div className={styles.labelRow}>
             <label htmlFor="mnemonic-textarea" className={styles.label}>
-              16 Kata Kode Tiket Rahasia Anda
+              16 Kata Sandi Rahasia atau Nomor Laporan
             </label>
             <span className={`${styles.wordCounter} ${wordCount === 16 ? styles.counterValid : styles.counterInvalid}`}>
-              {wordCount} / 16 kata
+              {wordCount} kata terisi
             </span>
           </div>
 
@@ -94,7 +96,7 @@ export const ReportTracker: React.FC<ReportTrackerProps> = ({ onBack, initialMne
             id="mnemonic-textarea"
             className={styles.textarea}
             rows={3}
-            placeholder="Ketik atau tempel 16 kata rahasia Anda di sini (dipisahkan spasi)..."
+            placeholder="Ketik atau tempel 16 kata sandi rahasia atau nomor laporan Anda..."
             value={mnemonicInput}
             onChange={(e) => {
               setMnemonicInput(e.target.value);
@@ -118,12 +120,12 @@ export const ReportTracker: React.FC<ReportTrackerProps> = ({ onBack, initialMne
             {isSearching ? (
               <>
                 <Lock size={15} />
-                <span>Mendekripsi Data di Peramban...</span>
+                <span>Membuka Status Laporan...</span>
               </>
             ) : (
               <>
                 <KeyRound size={15} />
-                <span>Dekripsi & Ambil Status Laporan</span>
+                <span>Cek Status Laporan Sekarang</span>
               </>
             )}
           </button>
@@ -140,7 +142,7 @@ export const ReportTracker: React.FC<ReportTrackerProps> = ({ onBack, initialMne
                   type="button"
                   onClick={() => handleCopyTicket(matchedReport.ticketId)}
                   style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-subtle)' }}
-                  title="Salin Nomor Tiket"
+                  title="Salin Nomor Laporan"
                 >
                   {copiedTicket ? <Check size={14} style={{ color: 'var(--status-green)' }} /> : <Copy size={14} />}
                 </button>
@@ -154,7 +156,7 @@ export const ReportTracker: React.FC<ReportTrackerProps> = ({ onBack, initialMne
               <Clock size={14} />
               <span>
                 {matchedReport.slaRemainingDays > 0
-                  ? `SLA Penanganan: H-${matchedReport.slaRemainingDays} Hari Kerja`
+                  ? `Batas Waktu Penanganan: ${matchedReport.slaRemainingDays} Hari Kerja`
                   : 'STATUS: PUTUSAN VONIS SELESAI'}
               </span>
             </div>
@@ -186,31 +188,31 @@ export const ReportTracker: React.FC<ReportTrackerProps> = ({ onBack, initialMne
               </span>
             </div>
             <div className={styles.metaItem}>
-              <span className={styles.metaLabel}>Integritas Berkas Bukti</span>
+              <span className={styles.metaLabel}>Keamanan Berkas Bukti</span>
               <span className={styles.metaVal} style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--status-green)' }}>
-                {matchedReport.hasEvidenceFile ? 'EXIF Steril (Canvas Scrubber)' : 'Tanpa Lampiran Foto'}
+                {matchedReport.hasEvidenceFile ? 'GPS & Info Perangkat Sudah Dihapus' : 'Tanpa Lampiran Foto'}
               </span>
             </div>
           </div>
 
           <div className={styles.descBox}>
-            <span className={styles.descTitle}>Uraian Kronologi (Didekripsi dari Brankas Klien)</span>
+            <span className={styles.descTitle}>Uraian Kejadian Laporan Anda</span>
             <p className={styles.descContent}>{matchedReport.incidentDescription}</p>
           </div>
 
           <div className={styles.apipNotesCard}>
             <div className={styles.apipHeader}>
               <ShieldCheck size={16} />
-              <span>Catatan Resmi Tim Pemeriksa Inspektorat / APIP</span>
+              <span>Catatan Resmi Tim Pemeriksa / Inspektorat</span>
             </div>
             <p className={styles.apipText}>{matchedReport.inspectorateNotes}</p>
             <div style={{ fontSize: 11, color: 'var(--text-subtle)', marginTop: 4 }}>
-              <strong>Dasar Regulasi Penindakan:</strong> {matchedReport.legalReference}
+              <strong>Dasar Hukum Penindakan:</strong> {matchedReport.legalReference}
             </div>
           </div>
 
           <div className={styles.milestonesSection}>
-            <h3 className={styles.milestonesTitle}>Linimasa Tahapan Investigasi Kasus Ini</h3>
+            <h3 className={styles.milestonesTitle}>Riwayat Perkembangan Penanganan Kasus</h3>
             <div>
               {matchedReport.timelineMilestones.map((m) => (
                 <div key={m.stageNumber} className={styles.milestoneItem}>
@@ -225,7 +227,7 @@ export const ReportTracker: React.FC<ReportTrackerProps> = ({ onBack, initialMne
                     <span className={styles.milestoneActor}>Pihak Berwenang: {m.actor}</span>
                     <p className={styles.milestoneSummary}>{m.actionSummary}</p>
                     <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, color: 'var(--text-subtle)' }}>
-                      Hash Tahap: {m.stageHash}
+                      Segel Verifikasi: {m.stageHash}
                     </span>
                   </div>
                 </div>
@@ -233,7 +235,7 @@ export const ReportTracker: React.FC<ReportTrackerProps> = ({ onBack, initialMne
             </div>
           </div>
 
-          <div style={{ borderTop: '1px solid var(--border-hairline)', paddingTop: 'var(--space-4)', display: 'flex', gap: '12px' }}>
+          <div style={{ borderTop: '1px solid var(--border-hairline)', paddingTop: 'var(--space-4)', display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
             <button
               type="button"
               className={styles.resetBtn}
@@ -243,7 +245,7 @@ export const ReportTracker: React.FC<ReportTrackerProps> = ({ onBack, initialMne
               }}
             >
               <Search size={14} style={{ display: 'inline', marginRight: 6 }} />
-              <span>Cek Tiket Lain</span>
+              <span>Lacak Laporan Lain</span>
             </button>
             <button
               type="button"

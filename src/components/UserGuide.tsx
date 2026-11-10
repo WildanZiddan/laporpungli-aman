@@ -67,29 +67,29 @@ export const UserGuide: React.FC<UserGuideProps> = ({ onStartReport, onCheckStat
     {
       id: 4,
       badge: 'Fase 04',
-      title: 'Menyimpan 16 Kata Rahasia (BIP-39 Mnemonic)',
+      title: 'Menyimpan 16 Kata Sandi Rahasia',
       subtitle: 'Satu-satunya kunci pribadi untuk membuka dan memantau kasus Anda',
       icon: <Key size={20} aria-hidden="true" />,
       tag: 'Kunci Pribadi',
       details: [
-        'Setelah laporan terkirim, Anda akan menerima kartu bukti dengan 16 kata rahasia standar BIP-39.',
-        'Catat ke-16 kata ini pada kertas fisik dan simpan di tempat aman, atau simpan di pengelola kata sandi terenkripsi.',
-        'PERINGATAN: Kunci ini tidak pernah disimpan di database server. Jika hilang, tidak ada pihak yang bisa memulihkannya.',
-        'Jangan pernah membagikan 16 kata ini kepada siapa pun yang mengaku sebagai petugas investigasi.'
+        'Setelah laporan terkirim, Anda akan menerima catatan bukti berisi 16 kata sandi rahasia.',
+        'Catat ke-16 kata ini di kertas pribadi dan simpan di tempat aman, atau unduh salinan teksnya.',
+        'PERINGATAN: Sandi ini tidak pernah disimpan di server mana pun. Jika hilang, tidak ada pihak yang bisa memulihkannya.',
+        'Jangan pernah membagikan 16 kata ini kepada siapa pun yang mengaku sebagai petugas pemeriksa.'
       ]
     },
     {
       id: 5,
       badge: 'Fase 05',
-      title: 'Pemantauan Linimasa Investigasi Inspektorat',
-      subtitle: 'Mengawal proses audit publik yang transparan dan anti-peti es',
+      title: 'Lacak Perkembangan Penanganan Laporan',
+      subtitle: 'Mengawal proses pemeriksaan yang transparan dan anti-peti es',
       icon: <Clock size={20} aria-hidden="true" />,
       tag: 'Akuntabilitas Terbuka',
       details: [
-        'Buka tab "Cek Tiket Rahasia" dan masukkan 16 kata Anda untuk mendekripsi status terkini kasus secara lokal.',
-        'Pantau 5 tahapan investigasi resmi APIP: Verifikasi Awal (SLA 3x24 jam) → Telaah Bukti → Audit Lapangan → Rekomendasi Sanksi → Tindak Lanjut.',
-        'Publik luas juga dapat mengawasi perkembangan kasus di Linimasa Publik melalui stempel Cryptographic Audit Hash (SHA-256).',
-        'Jika inspektorat lambat melewati batas waktu SLA, status peringatan keterlambatan akan menyala secara otomatis.'
+        'Buka menu "Lacak Laporan" dan masukkan 16 kata sandi Anda (atau nomor laporan) untuk membuka status kasus.',
+        'Pantau 5 tahapan pemeriksaan resmi: Verifikasi Awal (3x24 jam) → Telaah Bukti → Audit Lapangan → Rekomendasi Sanksi → Tindak Lanjut.',
+        'Statistik jumlah laporan per instansi dan per daerah ditampilkan terbuka pada Dashboard Transparansi di Beranda.',
+        'Jika pemeriksa lambat melewati batas waktu (SLA), status pengawasan akan memunculkan catatan keterlambatan.'
       ]
     }
   ];
@@ -122,7 +122,7 @@ export const UserGuide: React.FC<UserGuideProps> = ({ onStartReport, onCheckStat
               className={styles.btnSecondary} 
               onClick={onCheckStatus}
             >
-              <span>Sudah Punya 16 Kata? Cek Status</span>
+              <span>Sudah Punya 16 Kata Sandi? Lacak Laporan</span>
               <ArrowRight size={14} aria-hidden="true" />
             </button>
           </div>
@@ -210,7 +210,7 @@ export const UserGuide: React.FC<UserGuideProps> = ({ onStartReport, onCheckStat
                     className={styles.btnStepNext}
                     onClick={onStartReport}
                   >
-                    <span>Saya Siap, Buka The Vault</span>
+                    <span>Saya Siap, Buat Laporan Sekarang</span>
                     <Lock size={14} aria-hidden="true" />
                   </button>
                 )}

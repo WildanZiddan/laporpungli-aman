@@ -8,7 +8,7 @@ import {
   FileText, 
   Scale, 
   Clock,
-  Sparkles
+  ListFilter
 } from 'lucide-react';
 import styles from './FaqSection.module.css';
 
@@ -38,9 +38,9 @@ const FAQ_DATA: FaqItem[] = [
   {
     id: 'faq-3',
     category: 'ticket',
-    question: 'Apa fungsi 16 kata rahasia (BIP-39 Mnemonic) yang saya terima?',
-    answer: 'Ke-16 kata rahasia tersebut adalah kunci kriptografi unik yang dibangkitkan secara acak langsung di RAM perangkat Anda. Kunci ini adalah satu-satunya alat untuk mendekripsi status laporan Anda di menu "Cek Tiket Rahasia" tanpa perlu membuat username atau password yang rentan dilacak.',
-    legalRef: 'Standar Kriptografi Entropi BIP-39 & AES-GCM 256-bit'
+    question: 'Apa fungsi 16 kata sandi rahasia yang saya terima setelah melapor?',
+    answer: 'Ke-16 kata sandi rahasia tersebut adalah kunci unik yang dibuat langsung di perangkat Anda. Kunci ini menjadi satu-satunya alat untuk membuka dan memantau status laporan Anda melalui menu "Lacak Laporan" tanpa perlu membuat username atau password yang rentan dilacak.',
+    legalRef: 'Standar Enkripsi AES-GCM 256-bit di Sisi Klien'
   },
   {
     id: 'faq-4',
@@ -66,16 +66,16 @@ const FAQ_DATA: FaqItem[] = [
   {
     id: 'faq-7',
     category: 'investigation',
-    question: 'Berapa batas waktu (SLA) bagi Inspektorat/APIP untuk memproses laporan saya?',
-    answer: 'Setiap tahapan investigasi terikat dengan SLA (Service Level Agreement) yang terpampang transparan di linimasa publik. Tahap 1: Verifikasi Awal memiliki SLA maksimal 3x24 jam kerja. Tahap 2: Telaah Bukti memiliki SLA 7 hari kerja. Jika batas waktu ini terlampaui tanpa tindak lanjut, sistem secara otomatis menandai status kasus sebagai "Peringatan Keterlambatan".',
-    legalRef: 'Standar Operasional Pengawasan APIP Nasional'
+    question: 'Berapa batas waktu (SLA) bagi tim pemeriksa untuk memproses laporan saya?',
+    answer: 'Setiap tahapan pemeriksaan memiliki batas waktu tegas. Tahap 1: Verifikasi Awal memiliki batas waktu maksimal 3x24 jam kerja. Tahap 2: Audit Bukti memiliki batas waktu 7 hari kerja. Jika batas waktu terlampaui tanpa tindak lanjut, sistem menandai status pengawasan dengan peringatan keterlambatan.',
+    legalRef: 'Standar Operasional Pengawasan Inspektorat Nasional'
   },
   {
     id: 'faq-8',
     category: 'investigation',
-    question: 'Apa fungsi Cryptographic Audit Hash (SHA-256) pada linimasa publik?',
-    answer: 'Setiap perkembangan investigasi yang dicatatkan inspektorat (seperti Berita Acara, Pemanggilan Terlapor, atau Rekomendasi Sanksi) langsung disegel dengan hash SHA-256 berantai (Merkle-tree audit trail). Ini menjamin catatan kasus bersifat tamper-evident—tidak dapat diedit surut, dihapus diam-diam, atau dipeti-eskan.',
-    legalRef: 'Integritas Jejak Audit Kriptografis SHA-256'
+    question: 'Bagaimana Dashboard Transparansi memastikan laporan tidak dihilangkan atau dipeti-eskan?',
+    answer: 'Setiap berkas laporan diberi segel sidik jari digital SHA-256 yang tidak dapat diubah diam-diam, sementara data agregat sebaran sektor dan daerah ditampilkan terbuka pada Dashboard Transparansi Publik agar masyarakat dan lembaga pengawas dapat mengawal penyelesaiannya bersama.',
+    legalRef: 'Integritas Jejak Audit Kriptografis SHA-256 & UU KIP'
   }
 ];
 
@@ -106,7 +106,7 @@ export const FaqSection: React.FC = () => {
           Pertanyaan Kritis & Tanya Jawab (FAQ)
         </h1>
         <p className={styles.leadText}>
-          Penjelasan komprehensif mengenai cara kerja enkripsi browser, garansi kerahasiaan identitas, perlindungan hukum LPSK, dan akuntabilitas linimasa investigasi inspektorat.
+          Penjelasan yang mudah dipahami mengenai cara kerja keamanan perangkat, jaminan kerahasiaan identitas pelapor, perlindungan hukum LPSK, dan cara melacak perkembangan laporan.
         </p>
 
         <div className={styles.searchBarWrap}>
@@ -137,7 +137,7 @@ export const FaqSection: React.FC = () => {
           className={`${styles.filterChip} ${selectedCategory === 'all' ? styles.filterChipActive : ''}`}
           onClick={() => setSelectedCategory('all')}
         >
-          <Sparkles size={14} aria-hidden="true" />
+          <ListFilter size={14} aria-hidden="true" />
           <span>Semua ({FAQ_DATA.length})</span>
         </button>
         <button

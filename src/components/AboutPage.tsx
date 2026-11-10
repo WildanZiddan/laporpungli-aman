@@ -10,10 +10,10 @@ import styles from './AboutPage.module.css';
 
 interface AboutPageProps {
   onStartReport: () => void;
-  onViewTimeline: () => void;
+  onTrackReport: () => void;
 }
 
-export const AboutPage: React.FC<AboutPageProps> = ({ onStartReport, onViewTimeline }) => {
+export const AboutPage: React.FC<AboutPageProps> = ({ onStartReport, onTrackReport }) => {
   return (
     <div className={styles.aboutWrapper}>
       <section className={styles.heroCard}>
@@ -36,10 +36,10 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onStartReport, onViewTimel
             <button
               type="button"
               className={styles.btnSecondary}
-              onClick={onViewTimeline}
+              onClick={onTrackReport}
             >
               <Eye size={15} aria-hidden="true" />
-              <span>Pantau Linimasa Kasus Riil</span>
+              <span>Lacak Status Laporan</span>
             </button>
           </div>
         </div>
@@ -88,9 +88,9 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onStartReport, onViewTimel
             <div className={styles.pillarIconBox}>
               <FileCheck2 size={22} aria-hidden="true" />
             </div>
-            <h3 className={styles.pillarTitle}>Linimasa Terbuka Anti-Manipulasi</h3>
+            <h3 className={styles.pillarTitle}>Transparansi Data Anti-Manipulasi</h3>
             <p className={styles.pillarDesc}>
-              Linimasa investigasi disegel dengan segel digital anti-pemalsuan dan batas waktu penanganan. Menjamin tidak ada laporan yang dapat dipeti-eskan oleh oknum.
+              Dashboard analitik publik dan riwayat pemeriksaan disegel dengan sidik jari digital dan batas waktu SLA. Menjamin tidak ada laporan yang dipeti-eskan.
             </p>
             <span className={styles.pillarTag}>Akuntabilitas Publik</span>
           </div>

@@ -28,11 +28,11 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background-color: var(--status-amber-bg);
-  color: var(--color-ember);
-  border: 1px solid var(--status-amber-border);
+  background-color: var(--color-blue-subtle);
+  color: var(--color-blue-text);
+  border: 1px solid var(--color-blue-border);
   padding: 4px 12px;
-  border-radius: var(--radius-badges); /* 12px */
+  border-radius: var(--radius-pills);
   font-size: 12px;
   font-weight: 600;
   width: fit-content;
@@ -59,7 +59,7 @@
 }
 
 .heroLead em {
-  color: var(--color-ember);
+  color: var(--color-blue-text);
   font-style: normal;
   font-weight: 600;
 }
@@ -76,19 +76,20 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: var(--color-obsidian);
+  background-color: var(--color-navy-hero);
   color: var(--color-snow);
   padding: 12px 24px;
-  border-radius: var(--radius-buttons); /* 14px */
+  border-radius: var(--radius-buttons);
   font-size: 14px;
   font-weight: 600;
-  border: 1.5px solid #2c2e34;
-  box-shadow: var(--shadow-subtle);
+  border: 1px solid var(--color-navy-hero);
+  cursor: pointer;
   transition: all var(--transition-fast);
 }
 
 .btnPrimary:hover {
-  background-color: var(--color-slate);
+  background-color: var(--color-accent-blue);
+  border-color: var(--color-accent-blue);
 }
 
 .btnSecondary {
@@ -141,11 +142,11 @@
   font-family: var(--font-mono);
   font-size: 11.5px;
   font-weight: 700;
-  color: var(--color-ember);
-  background-color: var(--status-amber-bg);
+  color: var(--color-blue-text);
+  background-color: var(--color-blue-subtle);
   padding: 4px 10px;
-  border-radius: var(--radius-badges); /* 12px */
-  border: 1px solid var(--status-amber-border);
+  border-radius: var(--radius-badges);
+  border: 1px solid var(--color-blue-border);
 }
 
 .statExplanation {
@@ -173,7 +174,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--color-ember);
+  color: var(--color-blue-text);
 }
 
 .sectionTitle {
@@ -266,7 +267,7 @@
 }
 
 .legalIcon {
-  color: var(--color-ember);
+  color: var(--color-blue-text);
 }
 
 .legalTitle {
@@ -360,7 +361,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--color-ember);
+  color: var(--color-blue-text);
   display: block;
 }
 
@@ -380,7 +381,7 @@
 .memberCard {
   background-color: var(--surface-subtle-card);
   border: 1px solid var(--border-hairline);
-  border-radius: 24px;
+  border-radius: 20px;
   padding: 24px;
   display: flex;
   gap: 18px;
@@ -390,8 +391,8 @@
 .memberAvatar {
   width: 52px;
   height: 52px;
-  border-radius: 16px;
-  background-color: var(--color-obsidian);
+  border-radius: 14px;
+  background-color: var(--color-navy-hero);
   color: var(--color-snow);
   display: flex;
   align-items: center;
@@ -399,7 +400,6 @@
   font-weight: 700;
   font-size: 16px;
   flex-shrink: 0;
-  box-shadow: var(--shadow-subtle);
 }
 
 .memberInfo {
@@ -418,7 +418,7 @@
 .memberRole {
   font-size: 12.5px;
   font-weight: 600;
-  color: var(--color-ember);
+  color: var(--color-blue-text);
 }
 
 .memberDesc {
@@ -428,18 +428,17 @@
   margin: 4px 0 0 0;
 }
 
-/* Manifesto Section */
 .manifestoCard {
-  background-color: var(--surface-deep-dark); /* #27272a */
-  border: 1px solid #3f3f46;
-  border-radius: var(--radius-cards); /* 36px */
+  background: var(--gradient-navy-card);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-xl);
   padding: 36px 40px;
   display: flex;
   flex-direction: column;
   gap: 16px;
   text-align: center;
   color: #ffffff;
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 20px 40px -15px rgba(7, 16, 38, 0.3);
 }
 
 .quoteText {

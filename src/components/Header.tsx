@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { Shield, ShieldAlert, Lock } from 'lucide-react';
 import styles from './Header.module.css';
 
-export type NavTab = 'home' | 'timeline' | 'vault' | 'tracker' | 'guide' | 'faq' | 'about';
+export type NavTab = 'home' | 'cases' | 'vault' | 'tracker' | 'guide' | 'faq' | 'about';
 
 interface HeaderProps {
   activeTab: NavTab;
@@ -11,6 +11,15 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({ activeTab, onNavigate }) => {
   const lastEscPressRef = useRef<number>(0);
+
+  const triggerEmergencyExit = () => {
+    try {
+      window.sessionStorage.clear();
+    } catch {
+      // Storage may be blocked in strict privacy browsing modes
+    }
+    window.location.replace('https://www.bmkg.go.id');
+  };
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -28,33 +37,27 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, onNavigate }) => {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  const triggerEmergencyExit = () => {
-    try {
-      window.sessionStorage.clear();
-    } catch {
-    }
-    window.location.replace('https://www.bmkg.go.id');
-  };
-
   return (
     <header className={styles.header}>
       <div className={styles.bannerEmergency} role="region" aria-label="Peringatan Keselamatan">
-        <div className={styles.bannerEmergencyLeft}>
-          <ShieldAlert size={15} aria-hidden="true" />
-          <span>
-            <strong>Keamanan Pelapor:</strong> Merasa diawasi atau dalam situasi darurat? Tekan tombol <kbd className={styles.kbd}>ESC</kbd> 2x untuk keluar instan ke BMKG.
-          </span>
+        <div className={styles.bannerEmergencyInner}>
+          <div className={styles.bannerEmergencyLeft}>
+            <ShieldAlert size={15} aria-hidden="true" color="#ef4444" />
+            <span>
+              <strong>Keamanan Pelapor:</strong> Jika diawasi orang lain, tekan tombol Keluar Cepat untuk mengalihkan ke situs berita BMKG secara instan.
+            </span>
+          </div>
+          <button
+            type="button"
+            onClick={triggerEmergencyExit}
+            className={styles.btnQuickExit}
+            aria-label="Keluar Cepat dari Situs ke BMKG (Shortcut: ESC dua kali)"
+            title="Keluar Cepat (ESC 2x)"
+          >
+            <span className={styles.kbd}>ESC 2x</span>
+            <span>Keluar Cepat</span>
+          </button>
         </div>
-        <button
-          type="button"
-          onClick={triggerEmergencyExit}
-          className={styles.btnQuickExit}
-          aria-label="Keluar Cepat dari Situs ke BMKG (Shortcut: ESC dua kali)"
-          title="Keluar Cepat (ESC 2x)"
-        >
-          <span className={styles.kbd}>ESC 2x</span>
-          <span>KELUAR CEPAT</span>
-        </button>
       </div>
 
       <div className={styles.container}>
@@ -68,8 +71,11 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, onNavigate }) => {
             <Shield size={18} aria-hidden="true" />
           </div>
           <div className={styles.brandInfo}>
-            <span className={styles.brandName}>LaporPungli Aman</span>
-            <span className={styles.brandTagline}>Portal Pengaduan Aman Tanpa Identitas</span>
+            <div className={styles.brandTextCol}>
+              <span className={styles.brandName}>LaporPungli Aman</span>
+              <span className={styles.brandTagline}>Portal Pengaduan Tanpa Jejak</span>
+            </div>
+            <span className={styles.brandPillBadge}>Civic Tech Terenkripsi</span>
           </div>
         </a>
 
@@ -83,17 +89,10 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, onNavigate }) => {
           </button>
           <button
             type="button"
-            className={`${styles.navLink} ${activeTab === 'timeline' ? styles.navLinkActive : ''}`}
-            onClick={() => onNavigate('timeline')}
-          >
-            Linimasa Publik
-          </button>
-          <button
-            type="button"
             className={`${styles.navLink} ${activeTab === 'tracker' ? styles.navLinkActive : ''}`}
             onClick={() => onNavigate('tracker')}
           >
-            Status Tiket
+            Lacak Laporan
           </button>
           <button
             type="button"
@@ -123,10 +122,10 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, onNavigate }) => {
             type="button"
             className={styles.btnLapor}
             onClick={() => onNavigate('vault')}
-            aria-label="Buka Form Pelaporan Terenkripsi"
+            aria-label="Buka Formulir Lapor Rahasia"
           >
             <Lock size={15} aria-hidden="true" />
-            <span>Lapor Terenkripsi</span>
+            <span>Lapor Rahasia</span>
           </button>
         </div>
       </div>

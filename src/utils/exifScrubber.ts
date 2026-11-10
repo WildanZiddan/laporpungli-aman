@@ -55,7 +55,7 @@ export async function stripImageExif(file: File): Promise<IScrubResult> {
           'image/jpeg',
           0.90
         );
-      } catch (err) {
+      } catch {
         reject(new Error('Terjadi kendala saat memproses sanitasi piksel gambar.'));
       }
     };

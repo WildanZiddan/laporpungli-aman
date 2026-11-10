@@ -1,9 +1,21 @@
 export type PungliCategory = 
   | 'PTSL_BPN'
-  | 'SATPAS_SAMSAT'
   | 'PPDB_SEKOLAH'
   | 'RUTAN_LAPAS'
-  | 'PERIZINAN_PEMDA';
+  | 'DUKCAPIL'
+  | 'SATPAS_SAMSAT'
+  | 'PERIZINAN_PEMDA'
+  | 'LAINNYA';
+
+export const CATEGORY_LABELS: Record<PungliCategory, string> = {
+  PTSL_BPN: 'Pertanahan & PTSL',
+  PPDB_SEKOLAH: 'Pendidikan & Sekolah (PPDB)',
+  RUTAN_LAPAS: 'Lembaga Pemasyarakatan & Rutan',
+  DUKCAPIL: 'Kependudukan (Dukcapil)',
+  SATPAS_SAMSAT: 'Kepolisian & Samsat',
+  PERIZINAN_PEMDA: 'Perizinan & Layanan Pemda',
+  LAINNYA: 'Sektor Pelayanan Lainnya'
+};
 
 export type InspectorateStage = 
   | 'STAGE_1_VERIFIKASI'

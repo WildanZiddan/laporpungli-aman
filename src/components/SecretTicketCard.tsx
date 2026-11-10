@@ -33,28 +33,27 @@ export const SecretTicketCard: React.FC<SecretTicketCardProps> = ({ receipt, onD
 
   const handleDownload = () => {
     const fileContent = `================================================================================
-KARTU TIKET RAHASIA PELAPORAN — LAPORPUNGLI AMAN
-SISTEM ADVOKASI PUBLIK ZERO-KNOWLEDGE
+CATATAN SANDI PELACAK LAPORAN — LAPORPUNGLI AMAN
 ================================================================================
 
-Nomor Tiket Publik   : ${receipt.ticketId}
-Waktu Enkripsi       : ${new Date(receipt.createdAt).toLocaleString('id-ID')}
+Nomor Laporan        : ${receipt.ticketId}
+Waktu Pengiriman     : ${new Date(receipt.createdAt).toLocaleString('id-ID')}
 Instansi Terlapor    : ${receipt.agencyReported}
 Kategori Layanan     : ${receipt.categoryLabel}
 Estimasi Pungutan    : ${formatRupiah(receipt.amountRupiah)}
-Hash Bukti Steril    : ${receipt.sanitizedEvidenceHash}
+Segel Bukti Foto     : ${receipt.sanitizedEvidenceHash}
 
 --------------------------------------------------------------------------------
-KUNCI RAHASIA PELAPOR (16 KATA MNEMONIC):
+16 KATA SANDI RAHASIA PELACAK LAPORAN:
 --------------------------------------------------------------------------------
 ${receipt.mnemonicPhrase}
 
 --------------------------------------------------------------------------------
-PETUNJUK KESELAMATAN & PENGAWASAN:
-1. Simpan berkas ini di media yang aman dan tidak terhubung akun publik Anda.
-2. Server LaporPungli Aman TIDAK MENYIMPAN nama, NIK, nomor telepon, atau kata sandi Anda.
-3. 16 kata di atas adalah SATU-SATUNYA cara Anda mendekripsi pesan dua arah atau
-   memantau tahapan audit investigasi inspektorat.
+PETUNJUK KESELAMATAN & PELACAKAN:
+1. Simpan catatan ini di tempat yang aman dan tidak terhubung ke akun publik Anda.
+2. Sistem LaporPungli Aman TIDAK MENYIMPAN nama, KTP, nomor HP, atau akun Anda.
+3. 16 kata di atas adalah SATU-SATUNYA cara Anda membuka dan memantau status
+   penanganan laporan ini melalui menu "Lacak Laporan".
 4. Jangan pernah membagikan 16 kata ini kepada siapa pun yang tidak Anda percayai.
 ================================================================================`;
 
@@ -62,7 +61,7 @@ PETUNJUK KESELAMATAN & PENGAWASAN:
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = `TIKET-LAPORPUNGLI-${receipt.ticketId}.txt`;
+    link.download = `SANDI-LAPORPUNGLI-${receipt.ticketId}.txt`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -75,12 +74,12 @@ PETUNJUK KESELAMATAN & PENGAWASAN:
         <div className={styles.ticketTitleArea}>
           <span className={styles.receiptBadge}>
             <ShieldCheck size={12} style={{ display: 'inline', marginRight: 4 }} />
-            TERENKRIPSI AES-GCM-256
+            TERKUNCI AMAN DI PERANGKAT ANDA
           </span>
-          <h2 className={styles.ticketTitle}>Kunci Tiket Rahasia Anda</h2>
+          <h2 className={styles.ticketTitle}>16 Kata Sandi Pelacak Anda</h2>
         </div>
         <div className={styles.ticketIdBox}>
-          <span className={styles.ticketIdLabel}>Nomor Tiket</span>
+          <span className={styles.ticketIdLabel}>Nomor Laporan</span>
           <span className={styles.ticketIdVal}>{receipt.ticketId}</span>
         </div>
       </div>
@@ -88,7 +87,7 @@ PETUNJUK KESELAMATAN & PENGAWASAN:
       <div className={styles.securityNotice}>
         <AlertTriangle size={18} style={{ flexShrink: 0, marginTop: 1 }} />
         <span>
-          <strong>Wajib Dicatat / Diunduh:</strong> Sistem kami tidak menyimpan data akun Anda. 16 kata di bawah adalah <em>kunci privat kriptografis</em> satu-satunya untuk memantau proses audit inspektorat.
+          <strong>Wajib Dicatat / Diunduh:</strong> Sistem kami tidak menyimpan akun Anda. 16 kata di bawah adalah satu-satunya kunci pribadi Anda untuk melacak perkembangan laporan ini.
         </span>
       </div>
 
@@ -103,6 +102,10 @@ PETUNJUK KESELAMATAN & PENGAWASAN:
 
       <div className={styles.detailsBox}>
         <div className={styles.detailRow}>
+          <span className={styles.detailLabel}>Kategori Layanan</span>
+          <span className={styles.detailVal}>{receipt.categoryLabel}</span>
+        </div>
+        <div className={styles.detailRow}>
           <span className={styles.detailLabel}>Instansi Terlapor</span>
           <span className={styles.detailVal}>{receipt.agencyReported}</span>
         </div>
@@ -113,11 +116,11 @@ PETUNJUK KESELAMATAN & PENGAWASAN:
         <div className={styles.detailRow}>
           <span className={styles.detailLabel}>Status Bukti Foto</span>
           <span className={styles.detailVal} style={{ fontFamily: 'var(--font-mono)', fontSize: 11 }}>
-            {receipt.sanitizedEvidenceHash !== 'sha256:none' ? 'EXIF Steril (Lolos Sanitasi Canvas)' : 'Tanpa Lampiran Foto'}
+            {receipt.sanitizedEvidenceHash !== 'sha256:none' ? 'Foto Bersih (GPS & Info Perangkat Terhapus)' : 'Tanpa Lampiran Foto'}
           </span>
         </div>
         <div className={styles.detailRow}>
-          <span className={styles.detailLabel}>Waktu Enkripsi</span>
+          <span className={styles.detailLabel}>Waktu Pengiriman</span>
           <span className={styles.detailVal} style={{ fontFamily: 'var(--font-mono)', fontSize: 11 }}>
             {new Date(receipt.createdAt).toLocaleString('id-ID')}
           </span>
@@ -139,25 +142,20 @@ PETUNJUK KESELAMATAN & PENGAWASAN:
           type="button"
           onClick={handleDownload}
           className={`${styles.btnAction} ${styles.btnDownload}`}
-          aria-label="Unduh kartu tiket format teks"
+          aria-label="Simpan catatan sandi format teks"
         >
           <Download size={16} />
-          <span>Unduh Kartu Tiket (.txt)</span>
+          <span>Simpan Catatan Sandi (.txt)</span>
         </button>
 
         {onCheckStatus && (
           <button
             type="button"
             onClick={() => onCheckStatus(receipt.mnemonicPhrase)}
-            className={`${styles.btnAction}`}
-            style={{ 
-              backgroundColor: 'var(--bg-elevated)', 
-              color: 'var(--text-main)', 
-              border: '1px solid var(--border-strong)' 
-            }}
+            className={`${styles.btnAction} ${styles.btnTrack}`}
           >
             <KeyRound size={15} />
-            <span>Cek Status Tiket Ini Langsung</span>
+            <span>Lacak Laporan Ini Sekarang</span>
           </button>
         )}
 
@@ -166,7 +164,7 @@ PETUNJUK KESELAMATAN & PENGAWASAN:
           onClick={onDone}
           className={`${styles.btnAction} ${styles.btnDone}`}
         >
-          <span>Selesai & Lihat Linimasa Publik</span>
+          <span>Selesai &amp; Kembali ke Beranda</span>
           <ArrowRight size={15} />
         </button>
       </div>

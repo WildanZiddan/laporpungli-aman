@@ -1,4 +1,4 @@
-import type { IReportPayload, ITicketReceipt } from '../types';
+import { CATEGORY_LABELS, type IReportPayload, type ITicketReceipt } from '../types';
 
 const CIVIC_WORDLIST: string[] = [
   'akar', 'aksara', 'alun', 'amanat', 'angin', 'antariksa', 'arsip', 'asri',
@@ -103,14 +103,15 @@ export async function encryptWhistleblowerReport(
   const masterHashHex = bufferToHex(masterDigest);
 
   const mnemonicPhrase = derive16WordMnemonic(masterDigest);
-  const shortTicketId = `LP-2024-${masterHashHex.substring(0, 6).toUpperCase()}`;
+  const currentYear = new Date().getFullYear();
+  const shortTicketId = `LP-${currentYear}-${masterHashHex.substring(0, 6).toUpperCase()}`;
 
   const receipt: ITicketReceipt = {
     mnemonicPhrase,
     ticketId: shortTicketId,
     createdAt: new Date().toISOString(),
     sanitizedEvidenceHash: evidenceHash,
-    categoryLabel: payload.category,
+    categoryLabel: CATEGORY_LABELS[payload.category] || payload.category,
     agencyReported: payload.agencyName,
     amountRupiah: payload.extortionAmountRupiah
   };

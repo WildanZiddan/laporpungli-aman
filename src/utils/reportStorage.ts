@@ -272,7 +272,11 @@ export const findReportByMnemonic = (phrase: string): IStoredVaultReport | null 
   if (!normalized) return null;
 
   const list = getStoredReports();
-  const match = list.find(r => r.mnemonicPhrase.trim().toLowerCase().replace(/\s+/g, ' ') === normalized);
+  const match = list.find(
+    (r) =>
+      r.mnemonicPhrase.trim().toLowerCase().replace(/\s+/g, ' ') === normalized ||
+      r.ticketId.trim().toLowerCase() === normalized
+  );
   return match || null;
 };
 

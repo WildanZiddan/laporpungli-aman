@@ -20,12 +20,23 @@
   --color-ember: #ff5a00;
   --color-magenta-spark: #fe45e2;
 
-  /* 2. Surfaces from DESIGN.md */
-  --surface-canvas: #f4f4f5;
+  /* Figma Civic Palette Additions */
+  --color-navy-dark: #090d16;
+  --color-navy-hero: #0e182e;
+  --color-navy-card: #101e3b;
+  --gradient-navy-card: linear-gradient(135deg, #071026 0%, #0b1b42 48%, #132d6b 100%);
+  --color-accent-blue: #2563eb;
+  --color-accent-blue-hover: #1d4ed8;
+  --color-blue-subtle: #eff6ff;
+  --color-blue-border: #dbeafe;
+  --color-blue-text: #1d4ed8;
+
+  /* 2. Surfaces unified with Civic Navy/Blue system */
+  --surface-canvas: #f8fafc;
   --surface-card: #ffffff;
-  --surface-subtle-card: #fafafa;
-  --surface-dark-surface: #18181b;
-  --surface-deep-dark: #27272a;
+  --surface-subtle-card: #f8fafc;
+  --surface-dark-surface: #0e182e;
+  --surface-deep-dark: #101e3b;
 
   /* 3. System & Semantic Mappings */
   --bg-primary: var(--surface-canvas);        /* #f4f4f5 Paper Canvas */
@@ -124,21 +135,20 @@
   --space-12: var(--spacing-48);
   --space-16: var(--spacing-64);
 
-  /* 7. Geometry Philosophy from DESIGN.md */
-  /* 36px cards, 14px buttons & inputs, 12px tags, 10000px pills */
-  --radius-cards: 36px;
-  --radius-icons: 40px;
+  /* 7. Geometry Philosophy unified with Figma UI */
+  --radius-cards: 20px;
+  --radius-icons: 12px;
   --radius-pills: 10000px;
-  --radius-badges: 12px;
-  --radius-inputs: 14px;
-  --radius-buttons: 14px;
+  --radius-badges: 10px;
+  --radius-inputs: 12px;
+  --radius-buttons: 12px;
 
   /* Aliases */
   --radius-xs: 6px;
-  --radius-sm: 12px;
-  --radius-md: 14px;
-  --radius-lg: 36px;
-  --radius-xl: 36px;
+  --radius-sm: 10px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
 
   /* 8. Shadows from DESIGN.md */
   --shadow-subtle: rgba(255, 255, 255, 0.5) 0px 0.5px 0px 0px inset, rgba(117, 123, 133, 0.4) 0px 9px 14px -5px inset, rgb(44, 46, 52) 0px 0px 0px 1.5px, rgba(0, 0, 0, 0.14) 0px 4px 6px 0px;

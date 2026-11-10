@@ -9,11 +9,20 @@
 }
 
 .bannerEmergency {
-  background-color: #fef2f2;
-  border-bottom: 1px solid #fecaca;
-  padding: 8px 16px;
-  font-size: 13px;
-  color: #b91c1c;
+  background: linear-gradient(90deg, #071026 0%, #0d204d 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 8px 20px;
+  font-size: 12.5px;
+  color: #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.bannerEmergencyInner {
+  max-width: var(--container-max-width);
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -28,17 +37,18 @@
 
 .bannerEmergencyLeft strong {
   font-weight: 600;
+  color: #ffffff;
 }
 
 .kbd {
   font-family: var(--font-mono);
-  background: var(--surface-card);
-  border: 1px solid #fecaca;
-  border-radius: var(--radius-xs);
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 5px;
   padding: 1px 6px;
   font-size: 11px;
   font-weight: 600;
-  color: #b91c1c;
+  color: #ffffff;
 }
 
 .container {
@@ -63,18 +73,23 @@
 .brandLogoMark {
   width: 36px;
   height: 36px;
-  border-radius: 12px;
-  background-color: var(--color-obsidian);
+  border-radius: 10px;
+  background-color: var(--color-accent-blue);
   color: var(--surface-card);
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
   font-size: 15px;
-  box-shadow: var(--shadow-subtle);
 }
 
 .brandInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brandTextCol {
   display: flex;
   flex-direction: column;
 }
@@ -92,6 +107,17 @@
   font-weight: 500;
   color: var(--color-steel);
   letter-spacing: 0.02em;
+}
+
+.brandPillBadge {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-blue-text);
+  background-color: var(--color-blue-subtle);
+  border: 1px solid var(--color-blue-border);
+  padding: 4px 10px;
+  border-radius: var(--radius-pills);
+  line-height: 1.2;
 }
 
 .nav {
@@ -122,8 +148,8 @@
 }
 
 .navLinkActive {
-  color: var(--color-obsidian);
-  font-weight: 600;
+  color: var(--color-blue-text);
+  font-weight: 700;
   background-color: var(--surface-card);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 }
@@ -139,44 +165,56 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: #ffffff;
-  color: #dc2626;
-  padding: 8px 14px;
+  background-color: #dc2626;
+  color: #ffffff;
+  padding: 6px 14px;
   border-radius: var(--radius-pills);
-  font-size: 12.5px;
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 700;
   transition: all var(--transition-fast);
-  border: 1px solid #fecaca;
+  border: 1px solid #ef4444;
   flex-shrink: 0;
+  cursor: pointer;
 }
 
 .btnQuickExit:hover {
-  background-color: #fef2f2;
+  background-color: #b91c1c;
 }
 
 .btnLapor {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background-color: var(--color-obsidian);
+  background-color: var(--color-navy-hero);
   color: var(--color-snow);
   padding: 9px 16px;
-  border-radius: var(--radius-buttons); /* 14px */
+  border-radius: var(--radius-buttons);
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 600;
   transition: all var(--transition-fast);
-  border: 1.5px solid #2c2e34;
-  box-shadow: var(--shadow-subtle);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .btnLapor:hover {
-  background-color: var(--color-slate);
+  background-color: var(--color-accent-blue);
+  border-color: var(--color-accent-blue);
 }
 
 @media (max-width: 1024px) {
-  .nav {
+  .brandPillBadge {
     display: none;
+  }
+  .container {
+    height: auto;
+    flex-wrap: wrap;
+    padding: 12px 16px;
+  }
+  .nav {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
   }
   .bannerEmergencyLeft span {
     display: none;

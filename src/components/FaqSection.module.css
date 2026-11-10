@@ -21,11 +21,11 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background-color: var(--status-amber-bg);
-  color: var(--color-ember);
-  border: 1px solid var(--status-amber-border);
+  background-color: var(--color-blue-subtle);
+  color: var(--color-blue-text);
+  border: 1px solid var(--color-blue-border);
   padding: 4px 12px;
-  border-radius: var(--radius-badges); /* 12px */
+  border-radius: var(--radius-pills);
   font-size: 12px;
   font-weight: 600;
   width: fit-content;
@@ -63,9 +63,9 @@
 }
 
 .searchBarWrap:focus-within {
-  border-color: var(--color-obsidian);
+  border-color: var(--color-accent-blue);
   background-color: #ffffff;
-  box-shadow: 0 0 0 3px rgba(9, 9, 11, 0.08);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
 .searchIcon {
@@ -132,14 +132,13 @@
 }
 
 .filterChipActive {
-  background-color: var(--color-obsidian);
+  background-color: var(--color-accent-blue);
   color: var(--color-snow);
-  border-color: var(--color-obsidian);
-  box-shadow: var(--shadow-subtle);
+  border-color: var(--color-accent-blue);
 }
 
 .filterChipActive:hover {
-  background-color: var(--color-slate);
+  background-color: var(--color-accent-blue-hover);
   color: var(--color-snow);
 }
 
@@ -204,7 +203,7 @@
 
 .iconWrapRotated {
   transform: rotate(180deg);
-  background-color: var(--color-obsidian);
+  background-color: var(--color-accent-blue);
   color: var(--color-snow);
 }
 

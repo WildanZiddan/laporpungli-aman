@@ -147,21 +147,20 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background-color: var(--color-obsidian);
+  background-color: var(--color-accent-blue);
   color: var(--color-snow);
   padding: 13px 26px;
-  border-radius: var(--radius-buttons); /* 14px */
+  border-radius: var(--radius-buttons);
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  border: 1.5px solid #2c2e34;
-  box-shadow: var(--shadow-subtle);
+  border: 1px solid var(--color-accent-blue);
   transition: all var(--transition-fast);
   width: fit-content;
 }
 
 .btnDecrypt:hover {
-  background-color: var(--color-slate);
+  background-color: var(--color-accent-blue-hover);
 }
 
 .btnDecrypt:disabled {
@@ -174,18 +173,17 @@
   border: 1px solid var(--status-crimson-border);
   color: var(--status-crimson);
   padding: 12px 18px;
-  border-radius: var(--radius-inputs); /* 14px */
+  border-radius: var(--radius-inputs);
   font-size: 13px;
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-/* Decrypted Case Card Display */
 .decryptedCard {
   background-color: var(--surface-card);
   border: 1px solid var(--border-hairline);
-  border-radius: 28px;
+  border-radius: var(--radius-cards);
   padding: 28px;
   display: flex;
   flex-direction: column;
@@ -227,9 +225,9 @@
 }
 
 .stageAmber {
-  background-color: var(--status-amber-bg);
-  color: var(--color-ember);
-  border: 1px solid var(--status-amber-border);
+  background-color: var(--color-blue-subtle);
+  color: var(--color-blue-text);
+  border: 1px solid var(--color-blue-border);
 }
 
 .stageCrimson {
@@ -241,11 +239,11 @@
 .slaBox {
   font-size: 12.5px;
   font-weight: 600;
-  color: var(--color-ember);
-  background-color: var(--color-paper);
+  color: var(--color-blue-text);
+  background-color: var(--color-blue-subtle);
   padding: 6px 14px;
-  border-radius: var(--radius-badges); /* 12px */
-  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-badges);
+  border: 1px solid var(--color-blue-border);
   display: flex;
   align-items: center;
   gap: 6px;
@@ -310,11 +308,10 @@
   margin: 0;
 }
 
-/* Official Inspectorate APIP Notes */
 .apipNotesCard {
-  background-color: var(--status-amber-bg);
-  border: 1px solid var(--status-amber-border);
-  border-radius: var(--radius-inputs); /* 14px */
+  background-color: var(--color-blue-subtle);
+  border: 1px solid var(--color-blue-border);
+  border-radius: var(--radius-inputs);
   padding: 18px;
   display: flex;
   flex-direction: column;
@@ -327,7 +324,7 @@
   gap: 8px;
   font-size: 13.5px;
   font-weight: 700;
-  color: var(--color-ember);
+  color: var(--color-blue-text);
 }
 
 .apipText {
@@ -388,9 +385,9 @@
 }
 
 .dotCurrent {
-  background-color: var(--color-ember);
+  background-color: var(--color-accent-blue);
   color: #FFFFFF;
-  box-shadow: 0 0 0 4px var(--status-amber-bg);
+  box-shadow: 0 0 0 4px var(--color-blue-subtle);
 }
 
 .dotPending {

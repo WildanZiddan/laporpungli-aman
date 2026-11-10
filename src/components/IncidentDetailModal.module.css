@@ -109,13 +109,13 @@
 }
 
 .legalBox {
-  background-color: var(--color-paper);
-  border: 1px solid var(--border-hairline);
-  border-left: 3px solid var(--color-obsidian);
-  border-radius: var(--radius-inputs); /* 14px */
+  background-color: var(--color-blue-subtle);
+  border: 1px solid var(--color-blue-border);
+  border-left: 3px solid var(--color-accent-blue);
+  border-radius: var(--radius-inputs);
   padding: 14px 18px;
   font-size: 13px;
-  color: var(--color-steel);
+  color: var(--color-graphite);
   line-height: 1.5;
 }
 
@@ -179,7 +179,7 @@
 }
 
 .markerCurrent {
-  background-color: var(--color-ember);
+  background-color: var(--color-accent-blue);
   color: #ffffff;
   box-shadow: 0 0 0 2px var(--surface-card);
 }
@@ -221,7 +221,7 @@
 .stageActor {
   font-size: 12px;
   font-weight: 600;
-  color: var(--color-ember);
+  color: var(--color-blue-text);
 }
 
 .stageAction {

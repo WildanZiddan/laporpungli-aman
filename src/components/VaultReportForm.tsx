@@ -143,9 +143,9 @@ export const VaultReportForm: React.FC<VaultReportFormProps> = ({
     <div className={styles.formContainer} role="region" aria-label="Formulir Laporan Terenkripsi">
       <div className={styles.formHeader}>
         <div>
-          <h2 className={styles.headerTitle}>Formulir Pelaporan Terenkripsi (The Vault)</h2>
+          <h2 className={styles.headerTitle}>Formulir Lapor Pungli Rahasia</h2>
           <p className={styles.headerSubtitle}>
-            Laporan Anda dikunci dan dikirim langsung dari perangkat Anda tanpa melalui server yang bisa membaca isinya.
+            Laporan Anda dikunci langsung di perangkat Anda tanpa perlu memasukkan nama, KTP, atau nomor HP.
           </p>
         </div>
         <button
@@ -167,12 +167,12 @@ export const VaultReportForm: React.FC<VaultReportFormProps> = ({
         <div className={styles.stepDivider} />
         <div className={`${styles.stepIndicator} ${currentStep === 2 ? styles.stepActive : currentStep > 2 ? styles.stepCompleted : ''}`}>
           <div className={styles.stepCircle}>{currentStep > 2 ? '✓' : '2'}</div>
-          <span className={styles.stepLabel}>2. Kronologi & Nominal</span>
+          <span className={styles.stepLabel}>2. Cerita Kejadian & Nominal</span>
         </div>
         <div className={styles.stepDivider} />
         <div className={`${styles.stepIndicator} ${currentStep === 3 ? styles.stepActive : ''}`}>
           <div className={styles.stepCircle}>3</div>
-          <span className={styles.stepLabel}>3. Bukti & Enkripsi</span>
+          <span className={styles.stepLabel}>3. Unggah Bukti &amp; Kirim</span>
         </div>
       </div>
 
@@ -188,11 +188,13 @@ export const VaultReportForm: React.FC<VaultReportFormProps> = ({
               value={category}
               onChange={(e) => setCategory(e.target.value as PungliCategory)}
             >
-              <option value="PTSL_BPN">Pertanahan / Program Sertifikat Tanah PTSL (BPN & Desa)</option>
-              <option value="SATPAS_SAMSAT">Kepolisian / Penerbitan SIM & Samsat</option>
-              <option value="PPDB_SEKOLAH">Pendidikan / PPDB & Pungutan Komite Sekolah</option>
-              <option value="RUTAN_LAPAS">Rutan & Lembaga Pemasyarakatan (Fasilitas Khusus)</option>
-              <option value="PERIZINAN_PEMDA">Dinas Perizinan / Pelayanan Terpadu Satu Pintu (PTSP)</option>
+              <option value="PTSL_BPN">Pertanahan &amp; Sertifikat Tanah (PTSL / BPN / Desa)</option>
+              <option value="PPDB_SEKOLAH">Pendidikan &amp; Sekolah (PPDB / Pungutan Komite)</option>
+              <option value="RUTAN_LAPAS">Lembaga Pemasyarakatan &amp; Rutan</option>
+              <option value="DUKCAPIL">Kependudukan &amp; Catatan Sipil (Dukcapil / KTP / KK)</option>
+              <option value="SATPAS_SAMSAT">Kepolisian &amp; Samsat (SIM / STNK / Tilang)</option>
+              <option value="PERIZINAN_PEMDA">Dinas Perizinan &amp; Pelayanan Pemda (PTSP)</option>
+              <option value="LAINNYA">Sektor Pelayanan Publik Lainnya</option>
             </select>
           </div>
 
@@ -258,7 +260,14 @@ export const VaultReportForm: React.FC<VaultReportFormProps> = ({
               onChange={(e) => setIncidentDescription(e.target.value)}
               required
             />
-            <span className={styles.labelHint}>Hindari menyebutkan nama lengkap Anda sendiri di dalam teks agar anonimitas terjaga mutlak.</span>
+            <span className={styles.labelHint}>
+              Hindari menyebutkan nama lengkap Anda sendiri di dalam teks agar anonimitas tetap aman.
+              {incidentDescription.trim().length > 0 && incidentDescription.trim().length < 15 && (
+                <span style={{ display: 'block', color: 'var(--color-blue-text)', fontWeight: 600, marginTop: 4 }}>
+                  Tuliskan minimal 15 karakter agar tombol Lanjut aktif (kurang {15 - incidentDescription.trim().length} karakter lagi).
+                </span>
+              )}
+            </span>
           </div>
 
           <div className={styles.fieldGroup}>
@@ -301,7 +310,7 @@ export const VaultReportForm: React.FC<VaultReportFormProps> = ({
             <button
               type="button"
               className={styles.btnNext}
-              disabled={!incidentDescription.trim() || incidentDescription.length < 15}
+              disabled={incidentDescription.trim().length < 15}
               onClick={() => setCurrentStep(3)}
             >
               <span>Lanjut: Lampirkan Bukti</span>
@@ -333,7 +342,7 @@ export const VaultReportForm: React.FC<VaultReportFormProps> = ({
               >
                 <Upload size={24} color="var(--text-subtle)" />
                 <span style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text-main)' }}>
-                  {isScrubbing ? 'Memusnahkan Jejak EXIF GPS...' : 'Pilih atau Tarik Foto Bukti ke Sini'}
+                  {isScrubbing ? 'Membersihkan Jejak Lokasi Foto...' : 'Pilih atau Tarik Foto Bukti ke Sini'}
                 </span>
                 <span style={{ fontSize: '11.5px', color: 'var(--text-subtle)' }}>
                   Mendukung format JPG, PNG, atau WebP (Maks. 10 MB)
@@ -352,7 +361,7 @@ export const VaultReportForm: React.FC<VaultReportFormProps> = ({
                   <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                     <CheckCircle2 size={16} />
                     <span>
-                      <strong>EXIF Steril:</strong> Koordinat GPS, data kamera & timestamp telah dihapus.
+                      <strong>Foto Bersih &amp; Aman:</strong> Lokasi GPS dan info perangkat telah dihapus otomatis.
                     </span>
                   </div>
                   <button
@@ -384,12 +393,12 @@ export const VaultReportForm: React.FC<VaultReportFormProps> = ({
             )}
           </div>
 
-          <div style={{ background: 'var(--bg-elevated)', border: '1px solid var(--border-hairline)', borderRadius: '6px', padding: '14px', fontSize: '12.5px', color: 'var(--text-muted)', lineHeight: '1.5' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 6, color: 'var(--text-main)', fontWeight: 600, marginBottom: 4 }}>
+          <div style={{ background: 'var(--color-blue-subtle)', border: '1px solid var(--color-blue-border)', borderRadius: '12px', padding: '14px', fontSize: '12.5px', color: 'var(--text-body)', lineHeight: '1.5' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 6, color: 'var(--color-blue-text)', fontWeight: 700, marginBottom: 4 }}>
               <Lock size={14} />
               <span>Laporan Siap Dikirim Secara Rahasia</span>
             </div>
-            Setelah menekan tombol di bawah, laporan Anda akan dikunci dengan <strong>enkripsi tingkat militer</strong> langsung di perangkat Anda. Anda akan mendapatkan <strong>16 kata kode rahasia</strong> sebagai tiket untuk memantau perkembangan kasus.
+            Setelah menekan tombol di bawah, laporan Anda akan dikunci secara otomatis di perangkat Anda. Anda akan mendapatkan <strong>16 kata sandi rahasia</strong> sebagai kunci untuk melacak perkembangan kasus.
           </div>
 
           <div className={styles.footerNav}>
@@ -406,12 +415,12 @@ export const VaultReportForm: React.FC<VaultReportFormProps> = ({
               {isEncrypting ? (
                 <>
                   <div className={styles.loadingSpinner} />
-                  <span>Sedang Mengirim Laporan...</span>
+                  <span>Sedang Mengamankan Laporan...</span>
                 </>
               ) : (
                 <>
                   <Lock size={15} />
-                  <span>Kirim Laporan Aman &amp; Dapatkan Kode Tiket</span>
+                  <span>Kirim Laporan Aman &amp; Dapatkan Sandi Pelacak</span>
                 </>
               )}
             </button>
