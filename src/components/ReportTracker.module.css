@@ -451,3 +451,38 @@
 .resetBtn:hover {
   background-color: var(--color-paper);
 }
+
+@media (max-width: 640px) {
+  .trackerContainer {
+    padding: 20px 18px;
+    gap: 20px;
+  }
+  .mainTitle {
+    font-size: 20px;
+  }
+  .resetBtn {
+    width: 100%;
+    text-align: center;
+  }
+  .labelRow {
+    flex-wrap: wrap;
+  }
+  .btnDecrypt {
+    width: 100%;
+  }
+  .decryptedCard {
+    padding: 18px;
+    gap: 16px;
+  }
+  .ticketIdText {
+    font-size: 17px;
+    overflow-wrap: anywhere;
+  }
+  .metaGrid {
+    grid-template-columns: 1fr;
+    padding: 14px;
+  }
+  .milestoneHeadRow {
+    flex-wrap: wrap;
+  }
+}

@@ -297,8 +297,40 @@
 }
 
 @media (max-width: 640px) {
+  .formContainer {
+    padding: 20px 18px;
+    gap: 20px;
+  }
+  .headerTitle {
+    font-size: 20px;
+  }
+  .btnAbort {
+    width: 100%;
+    justify-content: center;
+  }
   .wizardBar .stepLabel {
     display: none;
+  }
+  .uploadZone {
+    padding: 20px 14px;
+  }
+  .previewContainer {
+    flex-wrap: wrap;
+  }
+  .previewMeta {
+    min-width: 0;
+    word-break: break-word;
+  }
+  .footerNav {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .btnNext,
+  .btnSubmit,
+  .btnBack {
+    width: 100%;
+    justify-content: center;
   }
 }
 

@@ -445,11 +445,56 @@
   margin: 0;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 960px) {
   .headerCard {
     grid-template-columns: 1fr;
   }
   .rulesGrid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .guideWrapper {
+    gap: 20px;
+  }
+  .headerCard,
+  .activeStepCard,
+  .rulesCard {
+    padding: 20px 18px;
+    gap: 20px;
+  }
+  .mainTitle {
+    font-size: 24px;
+  }
+  .btnPrimary,
+  .btnSecondary {
+    width: 100%;
+    justify-content: center;
+  }
+  .stepNavTab {
+    padding: 8px 12px;
+    font-size: 12.5px;
+  }
+  .stepCardHeader {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .stepTitleText {
+    font-size: 18px;
+  }
+  .instructionItem {
+    padding: 12px 14px;
+    font-size: 13.5px;
+  }
+  .stepNavButtons {
+    width: 100%;
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+  .btnStepPrev,
+  .btnStepNext {
+    width: 100%;
+    justify-content: center;
   }
 }

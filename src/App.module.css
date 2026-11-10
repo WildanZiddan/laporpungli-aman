@@ -448,14 +448,76 @@
 }
 
 @media (max-width: 960px) {
+  .contentContainer {
+    padding: 36px 20px 64px;
+    gap: 56px;
+  }
   .heroTitle {
-    font-size: 34px;
+    font-size: 36px;
   }
   .heroSplitGrid {
     grid-template-columns: 1fr;
   }
   .footerGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 32px;
+  }
+  .footerBrandCol {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .contentContainer {
+    padding: 24px 14px 48px;
+    gap: 44px;
+  }
+  .heroSection {
+    gap: 24px;
+  }
+  .heroHeader {
+    gap: 12px;
+  }
+  .heroTrustBadge {
+    font-size: 11px;
+    padding: 5px 11px;
+    line-height: 1.4;
+  }
+  .heroTitle {
+    font-size: clamp(25px, 7.2vw, 31px);
+    line-height: 1.18;
+  }
+  .heroSubtitle {
+    font-size: 14.5px;
+  }
+  .heroCardDark,
+  .heroCardLight {
+    padding: 22px 18px;
+    border-radius: 20px;
+    gap: 20px;
+  }
+  .darkCardTitle {
+    font-size: 21px;
+    margin-top: 16px;
+  }
+  .darkFeatureRow {
+    gap: 12px;
+  }
+  .btnHeroWhite,
+  .btnTrackerBlue {
+    padding: 13px 16px;
+    font-size: 13.5px;
+  }
+  .footerDark {
+    padding: 40px 16px 24px;
+  }
+  .footerGrid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+    padding-bottom: 28px;
+  }
+  .footerSecuritySpecs {
+    flex-wrap: wrap;
+    gap: 8px;
   }
 }

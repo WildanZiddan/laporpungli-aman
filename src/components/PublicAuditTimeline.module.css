@@ -406,3 +406,53 @@
   gap: 12px;
   color: var(--color-steel);
 }
+
+@media (max-width: 640px) {
+  .timelineContainer {
+    gap: 20px;
+  }
+  .heading {
+    font-size: 22px;
+  }
+  .leadText {
+    font-size: 14px;
+  }
+  .btnBack {
+    width: 100%;
+    justify-content: center;
+  }
+  .statusFilterGroup {
+    width: 100%;
+    flex-wrap: wrap;
+    border-radius: var(--radius-md);
+  }
+  .statusTabBtn {
+    flex: 1 1 auto;
+    text-align: center;
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+  .searchBox {
+    width: 100%;
+    min-width: 0;
+  }
+  .card {
+    padding: 18px;
+    gap: 14px;
+  }
+  .idAndCat,
+  .proofArea {
+    flex-wrap: wrap;
+  }
+  .stageStatusBadge {
+    white-space: normal;
+  }
+  .hashTag {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+  .btnDetail {
+    width: 100%;
+    justify-content: center;
+  }
+}

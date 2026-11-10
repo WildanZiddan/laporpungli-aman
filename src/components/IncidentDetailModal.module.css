@@ -263,3 +263,40 @@
   from { transform: translateY(12px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
+
+@media (max-width: 640px) {
+  .modalBackdrop {
+    padding: 10px;
+  }
+  .modalContent {
+    border-radius: 20px;
+    max-height: 92vh;
+  }
+  .modalHeader {
+    padding: 18px 18px 14px;
+    gap: 12px;
+  }
+  .headerTop {
+    flex-wrap: wrap;
+  }
+  .modalTitle {
+    font-size: 17px;
+  }
+  .modalBody {
+    padding: 18px;
+    gap: 16px;
+  }
+  .timelineRow {
+    gap: 12px;
+    padding-bottom: 18px;
+  }
+  .stageHashTag {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+  .modalFooter {
+    padding: 14px 18px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}

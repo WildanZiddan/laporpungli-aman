@@ -136,6 +136,11 @@
   border-radius: var(--radius-pills);
   border: 1px solid var(--border-hairline);
   overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.nav::-webkit-scrollbar {
+  display: none;
 }
 
 .navLink {
@@ -209,14 +214,18 @@
   border-color: var(--color-accent-blue);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1160px) {
   .brandPillBadge {
     display: none;
   }
+}
+
+@media (max-width: 960px) {
   .container {
     height: auto;
     flex-wrap: wrap;
-    padding: 12px 16px;
+    padding: 10px 16px;
+    gap: 10px;
   }
   .nav {
     order: 3;
@@ -229,25 +238,34 @@
 }
 
 @media (max-width: 480px) {
+  .bannerEmergency {
+    padding: 6px 12px;
+    gap: 10px;
+  }
   .container {
-    padding: 10px 12px;
+    padding: 8px 12px;
     gap: 8px;
   }
   .brand {
-    gap: 8px;
+    gap: 7px;
     min-width: 0;
   }
   .brandLogoImg {
-    height: 34px;
+    height: 30px;
   }
   .brandName {
-    font-size: 14px;
+    font-size: 13.5px;
   }
   .brandTagline {
-    font-size: 9.5px;
+    font-size: 9px;
   }
   .btnLapor {
-    padding: 8px 12px;
-    font-size: 12px;
+    padding: 7px 10px;
+    font-size: 11.5px;
+    gap: 5px;
+  }
+  .navLink {
+    padding: 6px 10px;
+    font-size: 12.5px;
   }
 }

@@ -269,3 +269,37 @@
   margin: 0;
   line-height: 1.5;
 }
+
+@media (max-width: 640px) {
+  .faqWrapper {
+    gap: 20px;
+  }
+  .headerCard {
+    padding: 20px 18px;
+  }
+  .mainTitle {
+    font-size: 24px;
+  }
+  .searchBarWrap {
+    padding: 10px 14px;
+  }
+  .filterChip {
+    padding: 7px 12px;
+    font-size: 12.5px;
+  }
+  .accordionHeader {
+    padding: 16px 18px;
+    gap: 12px;
+  }
+  .questionText {
+    font-size: 14.5px;
+  }
+  .accordionBody {
+    padding: 14px 18px 18px;
+  }
+  .legalRefBadge {
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}

@@ -419,21 +419,67 @@
 
 @media (max-width: 960px) {
   .metricsGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
-
+  .metricCard:last-child {
+    grid-column: 1 / -1;
+  }
   .chartsGrid {
     grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
+  .headerRow {
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+  .heading {
+    font-size: 22px;
+  }
+  .subtitle {
+    font-size: 14px;
+  }
+  .metricsGrid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .metricCard:last-child {
+    grid-column: auto;
+  }
+  .metricCard {
+    padding: 18px 20px;
+  }
+  .metricValue {
+    font-size: 30px;
+  }
+  .chartCard {
+    padding: 20px 18px;
+  }
+  .chartHeader {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
   .donutBody {
     flex-direction: column;
     align-items: stretch;
+    gap: 20px;
   }
-
   .donutWrap {
     margin: 0 auto;
+  }
+  .regionRowTop {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .chartFooterAction {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .btnViewCases,
+  .btnMapLink {
+    width: 100%;
+    justify-content: center;
   }
 }

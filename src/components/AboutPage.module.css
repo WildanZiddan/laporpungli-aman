@@ -22,6 +22,7 @@
   display: flex;
   flex-direction: column;
   gap: 18px;
+  min-width: 0;
 }
 
 .eyebrowBadge {
@@ -120,6 +121,7 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
+  min-width: 0;
 }
 
 .statMetricRow {
@@ -457,7 +459,7 @@
   letter-spacing: 0.05em;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 960px) {
   .heroCard {
     grid-template-columns: 1fr;
   }
@@ -469,5 +471,63 @@
   }
   .teamGrid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .aboutWrapper {
+    gap: 24px;
+  }
+  .heroCard,
+  .legalSection,
+  .teamCard {
+    padding: 20px 18px;
+    gap: 20px;
+  }
+  .heroTitle {
+    font-size: 24px;
+    line-height: 1.25;
+    overflow-wrap: break-word;
+  }
+  .heroLead {
+    font-size: 14px;
+  }
+  .btnPrimary,
+  .btnSecondary {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    white-space: normal;
+    padding: 12px 16px;
+  }
+  .statCalloutBox {
+    padding: 18px;
+    border-radius: 18px;
+  }
+  .statMetricRow {
+    flex-wrap: wrap;
+  }
+  .statNumber {
+    font-size: 38px;
+  }
+  .sectionTitle {
+    font-size: 20px;
+  }
+  .pillarCard {
+    padding: 20px;
+  }
+  .memberCard {
+    flex-direction: column;
+    padding: 18px;
+    gap: 12px;
+  }
+  .memberInfo {
+    min-width: 0;
+  }
+  .manifestoCard {
+    padding: 24px 18px;
+  }
+  .quoteText {
+    font-size: 15.5px;
   }
 }
